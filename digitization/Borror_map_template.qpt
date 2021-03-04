@@ -1,0 +1,239 @@
+<Layout units="mm" name="basic map" worldFileMap="{e8130978-c863-41e0-8227-b27ab2d8a8c1}" printResolution="300">
+ <Snapper snapToGuides="1" tolerance="5" snapToGrid="0" snapToItems="1"/>
+ <Grid offsetY="0" resolution="10" resUnits="mm" offsetUnits="mm" offsetX="0"/>
+ <PageCollection>
+  <symbol force_rhr="0" type="fill" alpha="1" name="" clip_to_extent="1">
+   <data_defined_properties>
+    <Option type="Map">
+     <Option type="QString" name="name" value=""/>
+     <Option name="properties"/>
+     <Option type="QString" name="type" value="collection"/>
+    </Option>
+   </data_defined_properties>
+   <layer class="SimpleFill" locked="0" pass="0" enabled="1">
+    <Option type="Map">
+     <Option type="QString" name="border_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+     <Option type="QString" name="color" value="255,255,255,255"/>
+     <Option type="QString" name="joinstyle" value="miter"/>
+     <Option type="QString" name="offset" value="0,0"/>
+     <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+     <Option type="QString" name="offset_unit" value="MM"/>
+     <Option type="QString" name="outline_color" value="35,35,35,255"/>
+     <Option type="QString" name="outline_style" value="no"/>
+     <Option type="QString" name="outline_width" value="0.26"/>
+     <Option type="QString" name="outline_width_unit" value="MM"/>
+     <Option type="QString" name="style" value="solid"/>
+    </Option>
+    <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+    <prop k="color" v="255,255,255,255"/>
+    <prop k="joinstyle" v="miter"/>
+    <prop k="offset" v="0,0"/>
+    <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+    <prop k="offset_unit" v="MM"/>
+    <prop k="outline_color" v="35,35,35,255"/>
+    <prop k="outline_style" v="no"/>
+    <prop k="outline_width" v="0.26"/>
+    <prop k="outline_width_unit" v="MM"/>
+    <prop k="style" v="solid"/>
+    <data_defined_properties>
+     <Option type="Map">
+      <Option type="QString" name="name" value=""/>
+      <Option name="properties"/>
+      <Option type="QString" name="type" value="collection"/>
+     </Option>
+    </data_defined_properties>
+   </layer>
+  </symbol>
+  <LayoutItem positionOnPage="0,0,mm" positionLock="false" size="297,210,mm" frame="false" blendMode="0" position="0,0,mm" itemRotation="0" zValue="0" uuid="{beb32aea-2822-4d51-b95e-daa635d17331}" opacity="1" visibility="1" type="65638" background="true" groupUuid="" frameJoinStyle="miter" referencePoint="0" outlineWidthM="0.3,mm" templateUuid="{beb32aea-2822-4d51-b95e-daa635d17331}" id="" excludeFromExports="0">
+   <FrameColor blue="0" red="0" alpha="255" green="0"/>
+   <BackgroundColor blue="255" red="255" alpha="255" green="255"/>
+   <LayoutObject>
+    <dataDefinedProperties>
+     <Option type="Map">
+      <Option type="QString" name="name" value=""/>
+      <Option name="properties"/>
+      <Option type="QString" name="type" value="collection"/>
+     </Option>
+    </dataDefinedProperties>
+    <customproperties/>
+   </LayoutObject>
+   <symbol force_rhr="0" type="fill" alpha="1" name="" clip_to_extent="1">
+    <data_defined_properties>
+     <Option type="Map">
+      <Option type="QString" name="name" value=""/>
+      <Option name="properties"/>
+      <Option type="QString" name="type" value="collection"/>
+     </Option>
+    </data_defined_properties>
+    <layer class="SimpleFill" locked="0" pass="0" enabled="1">
+     <Option type="Map">
+      <Option type="QString" name="border_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+      <Option type="QString" name="color" value="255,255,255,255"/>
+      <Option type="QString" name="joinstyle" value="miter"/>
+      <Option type="QString" name="offset" value="0,0"/>
+      <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+      <Option type="QString" name="offset_unit" value="MM"/>
+      <Option type="QString" name="outline_color" value="35,35,35,255"/>
+      <Option type="QString" name="outline_style" value="no"/>
+      <Option type="QString" name="outline_width" value="0.26"/>
+      <Option type="QString" name="outline_width_unit" value="MM"/>
+      <Option type="QString" name="style" value="solid"/>
+     </Option>
+     <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+     <prop k="color" v="255,255,255,255"/>
+     <prop k="joinstyle" v="miter"/>
+     <prop k="offset" v="0,0"/>
+     <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+     <prop k="offset_unit" v="MM"/>
+     <prop k="outline_color" v="35,35,35,255"/>
+     <prop k="outline_style" v="no"/>
+     <prop k="outline_width" v="0.26"/>
+     <prop k="outline_width_unit" v="MM"/>
+     <prop k="style" v="solid"/>
+     <data_defined_properties>
+      <Option type="Map">
+       <Option type="QString" name="name" value=""/>
+       <Option name="properties"/>
+       <Option type="QString" name="type" value="collection"/>
+      </Option>
+     </data_defined_properties>
+    </layer>
+   </symbol>
+  </LayoutItem>
+  <GuideCollection visible="1"/>
+ </PageCollection>
+ <LayoutItem rasterBorderColor="0,0,0,255" position="199.312,6.46024,mm" visibility="1" equalColumnWidth="0" zValue="2" legendFilterByAtlas="0" splitLayer="0" blendMode="0" templateUuid="{0cc18a99-0380-49dc-804d-9ffc335a40ac}" maxSymbolSize="0" wmsLegendHeight="25" symbolWidth="9" map_uuid="{e8130978-c863-41e0-8227-b27ab2d8a8c1}" type="65642" positionOnPage="199.312,6.46024,mm" positionLock="false" symbolAlignment="1" excludeFromExports="0" columnSpace="2" outlineWidthM="0.3,mm" itemRotation="0" size="82.5547,120.714,mm" legendFilterByMap="1" opacity="1" fontColor="#000000" wmsLegendWidth="50" resizeToContents="1" wrapChar="" frame="false" referencePoint="0" title="Species around Appledore Island" id="" rasterBorderWidth="0" columnCount="1" titleAlignment="1" groupUuid="" boxSpace="2" lineSpacing="1" background="true" minSymbolSize="0" uuid="{0cc18a99-0380-49dc-804d-9ffc335a40ac}" frameJoinStyle="miter" rasterBorder="1" symbolHeight="6">
+  <FrameColor blue="0" red="0" alpha="255" green="0"/>
+  <BackgroundColor blue="255" red="255" alpha="255" green="255"/>
+  <LayoutObject>
+   <dataDefinedProperties>
+    <Option type="Map">
+     <Option type="QString" name="name" value=""/>
+     <Option name="properties"/>
+     <Option type="QString" name="type" value="collection"/>
+    </Option>
+   </dataDefinedProperties>
+   <customproperties/>
+  </LayoutObject>
+  <styles>
+   <style alignment="1" marginBottom="3.5" name="title">
+    <styleFont style="" description=".AppleSystemUIFont,16,-1,5,50,0,0,0,0,0"/>
+   </style>
+   <style alignment="1" marginTop="3" name="group">
+    <styleFont style="" description=".AppleSystemUIFont,14,-1,5,50,0,0,0,0,0"/>
+   </style>
+   <style alignment="1" marginTop="3" name="subgroup">
+    <styleFont style="" description=".AppleSystemUIFont,12,-1,5,50,0,0,0,0,0"/>
+   </style>
+   <style alignment="1" marginTop="2.5" name="symbol">
+    <styleFont style="" description=".AppleSystemUIFont,13,-1,5,50,0,0,0,0,0"/>
+   </style>
+   <style alignment="1" marginTop="2" name="symbolLabel" marginLeft="2">
+    <styleFont style="" description=".AppleSystemUIFont,12,-1,5,50,0,0,0,0,0"/>
+   </style>
+  </styles>
+  <layer-tree-group>
+   <customproperties/>
+   <layer-tree-layer source="dbname='/Users/katesheridan/Documents/QGIS/CIEE-Intertidal/1984_Borror.sqlite' table='1984_Borror'(geometry) sql=" checked="Qt::Unchecked" legend_exp="" id="1984_Borror_d39d9747_7a65_439d_a3d4_31b7d698a4ac" legend_split_behavior="0" providerKey="spatialite" expanded="0" name="1984_Borror" patch_size="-1,-1">
+    <customproperties>
+     <property key="cached_name" value="1984_Borror"/>
+    </customproperties>
+   </layer-tree-layer>
+   <layer-tree-layer source="dbname='/Users/katesheridan/Documents/QGIS/CIEE-Intertidal/1984_Borror.sqlite' table='1984_Borror'(geometry) sql=" checked="Qt::Unchecked" legend_exp="" id="1984_Borror_e3ccc44e_3d7c_4fdb_a5d3_fe2714b569b3" legend_split_behavior="0" providerKey="spatialite" expanded="0" name="1984_Borror copy" patch_size="-1,-1">
+    <customproperties>
+     <property key="cached_name" value="1984_Borror copy"/>
+    </customproperties>
+   </layer-tree-layer>
+   <layer-tree-layer source="./1984_Borror_clipped.sqlite|layername=1984_borror_clipped" checked="Qt::Checked" legend_exp="" id="Clipped_096c2935_9740_4e67_b448_61e40ff71d89" legend_split_behavior="0" providerKey="ogr" expanded="1" name="1984" patch_size="-1,-1">
+    <customproperties>
+     <property key="cached_name" value="1984"/>
+    </customproperties>
+   </layer-tree-layer>
+   <layer-tree-layer source="./bathy_smoothed.shp" checked="Qt::Unchecked" legend_exp="" id="bathy_smoothed_c85737ff_e43b_41eb_8ab1_eff3aaf34408" legend_split_behavior="0" providerKey="ogr" expanded="1" name="bathy_smoothed" patch_size="-1,-1">
+    <customproperties>
+     <property key="cached_name" value="bathy_smoothed"/>
+    </customproperties>
+   </layer-tree-layer>
+   <layer-tree-layer source="" checked="Qt::Unchecked" legend_exp="" id="IMG_7675_crop_modified_acbb308e_102a_487e_b2be_63a3e5e7f156" legend_split_behavior="0" providerKey="FreehandRasterGeoreferencerLayerProvider" expanded="1" name="1984-raster" patch_size="-1,-1">
+    <customproperties>
+     <property key="cached_name" value="1984-raster"/>
+    </customproperties>
+   </layer-tree-layer>
+   <layer-tree-layer source="dbname='/Users/katesheridan/Documents/QGIS/CIEE-Intertidal/2014_Boynes-Coyer.sqlite' table=&quot;2014&quot; (geometry)" checked="Qt::Unchecked" legend_exp="" id="2014_2f4fcc32_8a78_4ceb_a064_dcd84cdde78f" legend_split_behavior="0" providerKey="spatialite" expanded="0" name="2014" patch_size="-1,-1">
+    <customproperties>
+     <property key="cached_name" value="2014"/>
+    </customproperties>
+   </layer-tree-layer>
+   <layer-tree-layer source="" checked="Qt::Unchecked" legend_exp="" id="2014_byrnes_coyer_crop_modified_f2affd3a_8932_4ee0_b817_b18cdc2004f8" legend_split_behavior="0" providerKey="FreehandRasterGeoreferencerLayerProvider" expanded="1" name="2014_byrnes_coyer_crop_modified" patch_size="-1,-1">
+    <customproperties>
+     <property key="cached_name" value="2014_byrnes_coyer_crop_modified"/>
+    </customproperties>
+   </layer-tree-layer>
+   <layer-tree-layer source="" checked="Qt::Unchecked" legend_exp="" id="IMG_7674_modified_modified_fe8cfb0b_a3e2_46cf_8a8e_271f2b9c3b49" legend_split_behavior="0" providerKey="FreehandRasterGeoreferencerLayerProvider" expanded="1" name="IMG_7674_modified_modified" patch_size="-1,-1">
+    <customproperties>
+     <property key="cached_name" value="IMG_7674_modified_modified"/>
+    </customproperties>
+   </layer-tree-layer>
+   <layer-tree-layer source="../../GitHub/geospatial/data/bathymetry_nos-item-356400/appledore_bathy.tiff" checked="Qt::Unchecked" legend_exp="" id="appledore_bathy_875ac8ec_cb88_44bf_8582_c0052503e021" legend_split_behavior="0" providerKey="gdal" expanded="0" name="appledore_bathy" patch_size="-1,-1">
+    <customproperties>
+     <property key="cached_name" value="appledore_bathy"/>
+    </customproperties>
+   </layer-tree-layer>
+   <layer-tree-layer source="crs=EPSG:3857&amp;format&amp;tilePixelRatio=2&amp;type=xyz&amp;url=https://mt1.google.com/vt/lyrs%3Ds%26x%3D%7Bx%7D%26y%3D%7By%7D%26z%3D%7Bz%7D&amp;zmax=18&amp;zmin=0" checked="Qt::Checked" legend_exp="" id="Google_sat_f2dbc6e4_9131_4356_b1d2_4685e9fa3501" legend_split_behavior="0" providerKey="wms" expanded="1" name="Google_sat" patch_size="-1,-1">
+    <customproperties>
+     <property key="cached_name" value="Google_sat"/>
+    </customproperties>
+   </layer-tree-layer>
+   <layer-tree-layer source="crs=EPSG:3857&amp;format&amp;tilePixelRatio=2&amp;type=xyz&amp;url=https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D&amp;zmax=18&amp;zmin=0" checked="Qt::Unchecked" legend_exp="" id="ESRI_sat_6ca177c2_64dc_4968_8ebd_7711b10e1578" legend_split_behavior="0" providerKey="wms" expanded="1" name="ESRI_sat" patch_size="-1,-1">
+    <customproperties>
+     <property key="cached_name" value="ESRI_sat"/>
+    </customproperties>
+   </layer-tree-layer>
+   <layer-tree-layer source="crs=EPSG:3857&amp;format&amp;type=xyz&amp;url=https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png&amp;zmax=19&amp;zmin=0" checked="Qt::Unchecked" legend_exp="" id="OpenStreetMap_d3ab12b1_054e_42ad_9122_29bd0eb40ebd" legend_split_behavior="0" providerKey="wms" expanded="1" name="OpenStreetMap" patch_size="-1,-1">
+    <customproperties>
+     <property key="cached_name" value="OpenStreetMap"/>
+    </customproperties>
+   </layer-tree-layer>
+   <custom-order enabled="0">
+    <item>OpenStreetMap_d3ab12b1_054e_42ad_9122_29bd0eb40ebd</item>
+    <item>IMG_7674_modified_modified_fe8cfb0b_a3e2_46cf_8a8e_271f2b9c3b49</item>
+    <item>ESRI_sat_6ca177c2_64dc_4968_8ebd_7711b10e1578</item>
+    <item>Google_sat_f2dbc6e4_9131_4356_b1d2_4685e9fa3501</item>
+    <item>2014_byrnes_coyer_crop_modified_f2affd3a_8932_4ee0_b817_b18cdc2004f8</item>
+    <item>appledore_bathy_875ac8ec_cb88_44bf_8582_c0052503e021</item>
+    <item>2014_2f4fcc32_8a78_4ceb_a064_dcd84cdde78f</item>
+    <item>IMG_7675_crop_modified_acbb308e_102a_487e_b2be_63a3e5e7f156</item>
+    <item>1984_Borror_d39d9747_7a65_439d_a3d4_31b7d698a4ac</item>
+    <item>bathy_smoothed_c85737ff_e43b_41eb_8ab1_eff3aaf34408</item>
+    <item>1984_Borror_e3ccc44e_3d7c_4fdb_a5d3_fe2714b569b3</item>
+    <item>Clipped_096c2935_9740_4e67_b448_61e40ff71d89</item>
+   </custom-order>
+  </layer-tree-group>
+ </LayoutItem>
+ <LayoutItem labelMargin="0,mm" mapRotation="0" isTemporal="0" positionOnPage="8.36586,6.61024,mm" positionLock="false" size="182.732,196.78,mm" frame="true" blendMode="0" position="8.36586,6.61024,mm" drawCanvasItems="true" itemRotation="0" zValue="1" keepLayerSet="false" followPresetName="" uuid="{e8130978-c863-41e0-8227-b27ab2d8a8c1}" opacity="1" visibility="1" type="65639" background="false" groupUuid="" frameJoinStyle="miter" referencePoint="0" outlineWidthM="0.3,mm" templateUuid="{e8130978-c863-41e0-8227-b27ab2d8a8c1}" mapFlags="0" id="Map 1" followPreset="false" excludeFromExports="0">
+  <FrameColor blue="0" red="0" alpha="255" green="0"/>
+  <BackgroundColor blue="255" red="255" alpha="255" green="255"/>
+  <LayoutObject>
+   <dataDefinedProperties>
+    <Option type="Map">
+     <Option type="QString" name="name" value=""/>
+     <Option name="properties"/>
+     <Option type="QString" name="type" value="collection"/>
+    </Option>
+   </dataDefinedProperties>
+   <customproperties/>
+  </LayoutObject>
+  <Extent ymin="5309488.52144224569201469" ymax="5310964.36780186928808689" xmax="-7860053.71993095614016056" xmin="-7861424.20934181287884712"/>
+  <LayerSet/>
+  <AtlasMap atlasDriven="0" scalingMode="2" margin="0.10000000000000001"/>
+  <labelBlockingItems/>
+  <atlasClippingSettings restrictLayers="0" clippingType="1" forceLabelsInside="0" enabled="0">
+   <layersToClip/>
+  </atlasClippingSettings>
+  <itemClippingSettings clippingType="1" forceLabelsInside="0" enabled="0" clipSource=""/>
+ </LayoutItem>
+ <customproperties>
+  <property key="atlasRasterFormat" value="png"/>
+ </customproperties>
+ <Atlas pageNameExpression="" filenamePattern="'output_'||@atlas_featurenumber" coverageLayer="" filterFeatures="0" sortFeatures="0" hideCoverage="0" enabled="0"/>
+</Layout>
