@@ -10,8 +10,8 @@ library(ggmap)
 
 
 ```{r load data}
-ct_data <- read.csv('./data/transects/ct_clean.csv')
-transect_info <- read.csv('./data/transects/transect_info_decimals.csv')
+ct_data <- read.csv('~/Documents/GitHub/geospatial/data/ct_clean.csv')
+transect_info <- read.csv('~/Documents/GitHub/geospatial/data/transects/transect_info_decimals.csv')
 ```
 
 ```{r base map}
@@ -33,12 +33,14 @@ ggmap(apple_toner)
 ```
 ```{r}
 test_point <- data.frame(lat = 42.987867, lon = -70.616167)
-#,13,15,20,22,24,26,28
+#,22,24,26,28
 
 
 apple_points <- ggmap(apple_toner) +
-  geom_point(data = test_point, aes( x = lon, y = lat, color = 'red'))
+  geom_point(data = transect_info, aes( x = dec_long, y = dec_lat, color = 'red'))
 
 apple_points
+
+ggsave("20210303appledore_intertidal.pdf", plot = last_plot(), width = 4.5, device = "pdf")
 ```
 
