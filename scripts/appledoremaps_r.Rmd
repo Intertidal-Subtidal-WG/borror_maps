@@ -6,6 +6,7 @@ output: html_document
 ```{r setup, include=FALSE}
 library(ggplot2)
 library(ggmap)
+library(tidyverse)
 ```
 
 
@@ -37,10 +38,36 @@ test_point <- data.frame(lat = 42.987867, lon = -70.616167)
 
 
 apple_points <- ggmap(apple_toner) +
-  geom_point(data = transect_info, aes( x = dec_long, y = dec_lat, color = 'red'))
+  geom_point(data = transect_info, aes( x = dec_long, y = dec_lat, color = 'red'), show.legend = FALSE) +
+  theme_classic() +
+    theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  labs(color = NULL, title = NULL, x = NULL, y = NULL)
 
 apple_points
 
-ggsave("20210303appledore_intertidal.pdf", plot = last_plot(), width = 4.5, device = "pdf")
+#ggsave("20210303appledore_intertidal.pdf", plot = last_plot(), device = "pdf")
+```
+
+```{r add coords}
+#modify ct_data to have transect coordinates and be what we want. 
+
+#remove random columns and filter to only the counted ones
+ct_data2 <- ct_data[, !colnames(ct_data) %in% c('X.1','X')]
+ct_data2 <- ct_data2 %>% filter(Count > 0)
+
+#subset transect info to what I want
+transect_info2 <- transect_info %>% select(Transect, dec_lat, dec_long, Position)
+
+#add the coordinates
+ct_combine <- merge(ct_data2, transect_info2, all.x = TRUE)
+```
+  
+```{r}
+#going to pick a species, lets go with urchins to start since we know they disappear
+#	Strongylocentrotus droebachiensis
+
+
+
 ```
 
