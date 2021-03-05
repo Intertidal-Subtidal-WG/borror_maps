@@ -7,11 +7,14 @@ output: html_document
 library(ggplot2)
 library(ggmap)
 library(tidyverse)
+library(gganimate)
 ```
 
 
 ```{r load data}
-ct_data <- read.csv('~/Documents/GitHub/geospatial/data/ct_clean.csv')
+ct_data <- read.csv('~/Documents/GitHub/geospatial/data/transects/ct_clean.csv')
+pc_data <- read.csv('~/Documents/GitHub/geospatial/data/transects/pc_clean.csv')
+
 transect_info <- read.csv('~/Documents/GitHub/geospatial/data/transects/transect_info_decimals.csv')
 ```
 
@@ -56,17 +59,46 @@ apple_points
 ct_data2 <- ct_data[, !colnames(ct_data) %in% c('X.1','X')]
 ct_data2 <- ct_data2 %>% filter(Count > 0)
 
+pc_data2 <- pc_data[, !colnames(pc_data) %in% c('X', 'Exposure')]
+pc_data2 <- pc_data2 %>% filter(Percent_cover > 0)
+
+ct_pc <- merge(ct_data2, pc_data2, all.x = TRUE, all.y = TRUE)
+
 #subset transect info to what I want
 transect_info2 <- transect_info %>% select(Transect, dec_lat, dec_long, Position)
 
 #add the coordinates
-ct_combine <- merge(ct_data2, transect_info2, all.x = TRUE)
+intertidal_combine <- merge(ct_pc, transect_info2, all.x = TRUE)
 ```
   
 ```{r}
 #going to pick a species, lets go with urchins to start since we know they disappear
 #	Strongylocentrotus droebachiensis
 
+#add all the sp you want in this list
+#sp_list <- c('Strongylocentrotus droebachiensis')
+sp_list <- c('Littorina saxatilis','Littorina littorea','Littorina obtusata')
+
+#filter whole dataset by those sp
+inter_sub <- intertidal_combine %>% subset(Organism %in% sp_list)
+
+inter_sub_map <- ggmap(apple_toner) +
+  geom_jitter(data = inter_sub, aes( x = dec_long, y = dec_lat, color = Organism), show.legend = FALSE, width = .0002, height = .0002) +
+#    geom_point(data = inter_sub, aes( x = dec_long, y = dec_lat, color = 'red'), show.legend = FALSE) +
+  theme_classic() +
+    theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  labs(color = NULL, title = 'Littorina species, year: {closest_state}', x = NULL, y = NULL) +
+  transition_states(Year,
+                    transition_length = 3,
+                    state_length = 20) +
+  enter_appear() +
+  exit_shrink()
+
+
+animate(inter_sub_map, fps = 2, width = 500, height = 500, renderer = magick_renderer())
+
+anim_save('littorinatest.gif', animation = last_animation())
 
 
 ```
