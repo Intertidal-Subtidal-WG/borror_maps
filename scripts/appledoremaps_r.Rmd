@@ -1,0 +1,44 @@
+---
+title: "mappos"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(ggmap)
+```
+
+
+```{r load data}
+ct_data <- read.csv('./data/transects/ct_clean.csv')
+transect_info <- read.csv('./data/transects/transect_info_decimals.csv')
+```
+
+```{r base map}
+#lets make a base map
+
+#bboxfinder results: -70.620060,42.983899,-70.608237,42.993709
+apple_bb <- c(left = -70.62,
+            bottom = 42.9832,
+            right = -70.6085,
+            top = 42.9933)
+
+#set up the map, will download the required images
+apple_toner <- get_stamenmap(bbox = apple_bb, zoom = 14, maptype = "toner-lite")
+ggmap(apple_toner)
+
+#terrain will be too low res
+#apple_terrain <- get_stamenmap(bbox = apple_bb, zoom = 13, maptype = "terrain-background")
+#ggmap(apple_terrain)
+```
+```{r}
+test_point <- data.frame(lat = 42.987867, lon = -70.616167)
+#,13,15,20,22,24,26,28
+
+
+apple_points <- ggmap(apple_toner) +
+  geom_point(data = test_point, aes( x = lon, y = lat, color = 'red'))
+
+apple_points
+```
+
