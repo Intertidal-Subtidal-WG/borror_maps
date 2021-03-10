@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="wave_height_annual_return" id="wave_height_annual_return">
+	<SimpleField name="StationId.x" type="int"></SimpleField>
+	<SimpleField name="Depth.x" type="float"></SimpleField>
+	<SimpleField name="Datum_Conv.x" type="float"></SimpleField>
+	<SimpleField name="MEAN_WH_ARI_1" type="float"></SimpleField>
+	<SimpleField name="MEAN_WH_ARI_2" type="float"></SimpleField>
+	<SimpleField name="MEAN_WH_ARI_5" type="float"></SimpleField>
+	<SimpleField name="MEAN_WH_ARI_10" type="float"></SimpleField>
+	<SimpleField name="MEAN_WH_ARI_20" type="float"></SimpleField>
+	<SimpleField name="MEAN_WH_ARI_50" type="float"></SimpleField>
+	<SimpleField name="MEAN_WH_ARI_100" type="float"></SimpleField>
+	<SimpleField name="MEAN_WH_ARI_200" type="float"></SimpleField>
+	<SimpleField name="MEAN_WH_ARI_500" type="float"></SimpleField>
+	<SimpleField name="MEAN_WH_ARI_1000" type="float"></SimpleField>
+	<SimpleField name="MEAN_WH_ARI_2000" type="float"></SimpleField>
+	<SimpleField name="MEAN_WH_ARI_5000" type="float"></SimpleField>
+	<SimpleField name="MEAN_WH_ARI_10000" type="float"></SimpleField>
+	<SimpleField name="StationId.y" type="int"></SimpleField>
+	<SimpleField name="Depth.y" type="float"></SimpleField>
+	<SimpleField name="Datum_Conv.y" type="float"></SimpleField>
+	<SimpleField name="CL95_WH_ARI_1" type="float"></SimpleField>
+	<SimpleField name="CL95_WH_ARI_2" type="float"></SimpleField>
+	<SimpleField name="CL95_WH_ARI_5" type="float"></SimpleField>
+	<SimpleField name="CL95_WH_ARI_10" type="float"></SimpleField>
+	<SimpleField name="CL95_WH_ARI_20" type="float"></SimpleField>
+	<SimpleField name="CL95_WH_ARI_50" type="float"></SimpleField>
+	<SimpleField name="CL95_WH_ARI_100" type="float"></SimpleField>
+	<SimpleField name="CL95_WH_ARI_200" type="float"></SimpleField>
+	<SimpleField name="CL95_WH_ARI_500" type="float"></SimpleField>
+	<SimpleField name="CL95_WH_ARI_1000" type="float"></SimpleField>
+	<SimpleField name="CL95_WH_ARI_2000" type="float"></SimpleField>
+	<SimpleField name="CL95_WH_ARI_5000" type="float"></SimpleField>
+	<SimpleField name="CL95_WH_ARI_10000" type="float"></SimpleField>
+</Schema>
+<Folder><name>wave_height_annual_return</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">2026</SimpleData>
+		<SimpleData name="Depth.x">9.48913</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0867</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">4.02021422355172</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">5.51251834657688</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">6.20220149171152</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">6.40367913468153</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">6.53594293116856</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">6.6488167935326</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">6.70709748909531</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">6.76537818465803</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">6.81956624543157</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">6.84644756405217</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">6.87332888267276</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">6.90886405298495</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">6.93574537160554</SimpleData>
+		<SimpleData name="StationId.y">2026</SimpleData>
+		<SimpleData name="Depth.y">9.48913</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0867</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">5.23462738554216</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">6.78255802894061</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">7.46420672015159</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">7.66343762578397</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">7.81113247268854</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">7.92405785945934</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">8.00222290002982</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">8.02224803645185</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">8.04871982689208</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">8.0687449633141</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">8.08877009973613</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">8.11524189017636</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">8.13526702659838</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.611543,42.9683160000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">2027</SimpleData>
+		<SimpleData name="Depth.x">9.999855</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0864</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">1.42927909300948</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">1.57499985114707</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">1.69228734601434</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">1.77251167521411</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">1.83074258589542</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">1.89256516233879</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">1.93933213603613</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">1.98609910973346</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">2.01874106377419</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">2.03703054618834</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">2.0553200286025</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">2.07949740924671</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">2.09778689166086</SimpleData>
+		<SimpleData name="StationId.y">2027</SimpleData>
+		<SimpleData name="Depth.y">9.999855</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0864</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">2.7059414251381</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">2.8328510817985</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">2.9640172060195</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">3.03722246196912</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">3.09562387020309</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">3.17282633252855</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">3.21319319357364</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">3.23786680315891</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">3.27048354087196</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">3.29515715045722</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">3.31983076004249</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">3.35244749775554</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">3.3771211073408</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.6232699999999,42.968958</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">2028</SimpleData>
+		<SimpleData name="Depth.x">10.000149</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0863</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">2.97109585830952</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">4.13682465175125</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">5.06172008299485</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">5.57427154461057</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">5.95831036537696</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">6.32212744894904</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">6.51891367264817</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">6.66547499583563</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">6.81168821088858</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">6.87028078712887</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">6.92887336336916</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">7.00369055046724</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">7.03785941002786</SimpleData>
+		<SimpleData name="StationId.y">2028</SimpleData>
+		<SimpleData name="Depth.y">10.000149</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0863</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">4.20002223953945</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">5.38311006089359</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">6.31793462502534</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">6.83470774706806</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">7.22525179782661</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">7.59201078045441</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">7.80035904351667</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">7.9351972245439</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">8.06748927866579</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">8.14770650756733</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">8.21136917850715</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">8.25454404891275</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">8.28720457755465</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.627085,42.969414</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">2030</SimpleData>
+		<SimpleData name="Depth.x">9.754207</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0866</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">3.77320442630945</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">5.39508646072846</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">6.57564290912173</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">7.0993015074072</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">7.42621125346807</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">7.66058537928557</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">7.77798634036015</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">7.81319351439182</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">7.83465942999558</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">7.85089776828855</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">7.86713610658152</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">7.88860202218529</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">7.90484036047826</SimpleData>
+		<SimpleData name="StationId.y">2030</SimpleData>
+		<SimpleData name="Depth.y">9.754207</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0866</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">4.99768598599522</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">6.63181492704888</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">7.84151567382841</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">8.37128921532056</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">8.69183909054728</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">8.93312916943449</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">9.02509043882507</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">9.07048244989617</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">9.13048742461448</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">9.17587943568557</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">9.20768439347489</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">9.22936142567025</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">9.24575946749961</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.6037889999999,42.9743770000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">2031</SimpleData>
+		<SimpleData name="Depth.x">3.095226</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0861</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">1.42514806667542</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">1.58196276504928</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">1.69869193234795</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">1.78046464205242</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">1.84697877541128</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">1.92857438832308</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">1.99029908668403</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">2.03810841956382</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">2.09787876977421</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">2.14309329425672</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">2.18830781873922</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">2.23575308037062</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">2.26937662642197</SimpleData>
+		<SimpleData name="StationId.y">2031</SimpleData>
+		<SimpleData name="Depth.y">3.095226</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0861</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">2.69795987480422</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">2.83330662933113</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">2.96962544840806</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">3.04750043271906</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">3.11483413970624</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">3.20291126230219</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">3.25390051666405</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">3.30488977102591</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">3.3722938989042</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">3.41639831196027</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">3.45231001558962</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">3.49978270555253</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">3.53569440918188</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.625492,42.978145</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">2033</SimpleData>
+		<SimpleData name="Depth.x">2.426538</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0863</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">1.43735851522361</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">1.60569512158719</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">1.7596312969235</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">1.85113852922365</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">1.92941177420523</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">2.01644240956549</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">2.05558074982838</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">2.09471909009126</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">2.14645716167203</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">2.18559550193492</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">2.20980530594724</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">2.23031597375665</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">2.24583169498894</SimpleData>
+		<SimpleData name="StationId.y">2033</SimpleData>
+		<SimpleData name="Depth.y">2.426538</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0863</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">2.70569038858461</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">2.86619049831783</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">3.0284796138589</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">3.11996049714588</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">3.20658310698781</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">3.2761641074375</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">3.32880010232921</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">3.38143609722091</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">3.4183876132274</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">3.43735871037129</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">3.45632980751517</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">3.48140823382051</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">3.5003793309644</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.601759,42.9826150000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">2034</SimpleData>
+		<SimpleData name="Depth.x">9.998813</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.086</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">1.78401365791976</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">2.3179540873708</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">2.60848270136518</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">2.7589047433578</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">2.85433119461846</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">2.95315054365682</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">3.00852005250446</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">3.0313446040459</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">3.06151701998174</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">3.08434157152318</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">3.10716612306462</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">3.13733853900045</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">3.16016309054189</SimpleData>
+		<SimpleData name="StationId.y">2034</SimpleData>
+		<SimpleData name="Depth.y">9.998813</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.086</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">3.03714939097516</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">3.60947616010239</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">3.86953337049291</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">4.02597133252562</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">4.12647308819557</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">4.21046214947861</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">4.22818469923544</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">4.24590724899227</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">4.26933518542887</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">4.2870577351857</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">4.30478028494253</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">4.32820822137913</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">4.34593077113596</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.61895,42.985573</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">2035</SimpleData>
+		<SimpleData name="Depth.x">9.998199</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.086</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">1.78401365791976</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">2.3179540873708</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">2.60848270136518</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">2.7589047433578</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">2.85433119461846</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">2.95315054365682</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">3.00852005250446</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">3.0313446040459</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">3.06151701998174</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">3.08434157152318</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">3.10716612306462</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">3.13733853900045</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">3.16016309054189</SimpleData>
+		<SimpleData name="StationId.y">2035</SimpleData>
+		<SimpleData name="Depth.y">9.998199</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.086</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">3.03714939097516</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">3.60947616010239</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">3.86953337049291</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">4.02597133252562</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">4.12647308819557</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">4.21046214947861</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">4.22818469923544</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">4.24590724899227</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">4.26933518542887</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">4.2870577351857</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">4.30478028494253</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">4.32820822137913</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">4.34593077113596</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.619063,42.986068</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">2037</SimpleData>
+		<SimpleData name="Depth.x">8.944949</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.086</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">3.17720829137284</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">4.61994399645082</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">5.78422955098648</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">6.52276444858475</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">7.20558665607122</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">7.99714745057762</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">8.55598680017286</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">9.0726582183741</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">9.69431461913085</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">10.1295166165592</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">10.5370432170503</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">11.0356257668869</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">11.3838480723453</SimpleData>
+		<SimpleData name="StationId.y">2037</SimpleData>
+		<SimpleData name="Depth.y">8.944949</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.086</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">4.40560058062461</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">5.87698925136428</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">7.0497382819898</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">7.78776716894079</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">8.46335198404811</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">9.25573014468218</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">9.81899934448329</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">10.3332523983753</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">10.9594267531193</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">11.3997943479679</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">11.8086398834666</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">12.3030633300854</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">12.6530249949435</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.608847,42.9894130000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">2039</SimpleData>
+		<SimpleData name="Depth.x">7.816506</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0857</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">3.01009871040573</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">4.40531304935678</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">5.20680694282162</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">5.60571016433166</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">5.84206858834692</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">6.02057661455785</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">6.07845078215397</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">6.13632494975009</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">6.20459149017639</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">6.22530229325333</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">6.24601309633027</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">6.27339128878535</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">6.29410209186229</SimpleData>
+		<SimpleData name="StationId.y">2039</SimpleData>
+		<SimpleData name="Depth.y">7.816506</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0857</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">4.23159723115352</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">5.68110588710835</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">6.50679274019431</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">6.86800567551003</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">7.10964809749948</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">7.28263574775893</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">7.37819208428772</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">7.41206566500403</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">7.43273211407121</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">7.44836567927578</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">7.46399924448036</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">7.48466569354753</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">7.5002992587521</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.618256,42.9945690000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">7114</SimpleData>
+		<SimpleData name="Depth.x">7.990076</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0865</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">3.59589084827438</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">4.93223219985417</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">5.84773067949665</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">6.25267227991576</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">6.49722750594212</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">6.67504647885099</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">6.76950364879405</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">6.80852754591219</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">6.82517519121374</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">6.83776864872928</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">6.85036210624481</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">6.86700975154637</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">6.8796032090619</SimpleData>
+		<SimpleData name="StationId.y">7114</SimpleData>
+		<SimpleData name="Depth.y">7.990076</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0865</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">4.81580881298098</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">6.18719408758802</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">7.11577524424535</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">7.52139540800982</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">7.77439154724277</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">7.95506374430173</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">8.00935425485925</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">8.02376179781599</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">8.0428075336288</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">8.05721507658554</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">8.07162261954229</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">8.0906683553551</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">8.10507589831184</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.6199999999999,42.97</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10726</SimpleData>
+		<SimpleData name="Depth.x">1.432181</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0863</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">2.22160600523399</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">2.40706544315492</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">2.54670111162911</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">2.63446355368584</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">2.70402780218447</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">2.79598673667454</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">2.83147858092788</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">2.86488439199642</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">2.90904447218042</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">2.94245028324896</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">2.97585609431749</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">3.01039792590187</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">3.02775144908168</SimpleData>
+		<SimpleData name="StationId.y">10726</SimpleData>
+		<SimpleData name="Depth.y">1.432181</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0863</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">3.48475913632951</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">3.65758287679398</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">3.81833809759913</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">3.90061534128089</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">3.98289258496265</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">4.05156749738717</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">4.09785772057746</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">4.14414794376776</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">4.20207441743012</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">4.2200556956092</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">4.23803697378827</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">4.26180693059518</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">4.27978820877425</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.61984,42.97562</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10727</SimpleData>
+		<SimpleData name="Depth.x">1.432988</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0861</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">1.720345130567</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">2.12295273087531</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">2.3468238619867</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">2.47879416966371</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">2.59808900477644</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">2.71179927047541</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">2.79740957749725</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">2.84984861596865</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">2.9178010264498</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">2.96920504058943</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">3.01083378411514</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">3.04655506075469</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">3.07357716337714</SimpleData>
+		<SimpleData name="StationId.y">10727</SimpleData>
+		<SimpleData name="Depth.y">1.432988</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0861</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">2.97971414142197</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">3.39176838760296</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">3.61904295687601</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">3.74988376593051</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">3.85940975563179</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">3.98670232494939</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">4.05495735669861</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">4.11872007792172</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">4.20148755018716</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">4.23300124431469</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">4.26451493844221</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">4.30617377608307</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">4.3376874702106</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.61443,42.98321</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10728</SimpleData>
+		<SimpleData name="Depth.x">1.436752</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0863</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">2.25503090950878</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">2.49493527039017</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">2.67854483888777</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">2.80147489610269</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">2.89722245522825</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">3.01689512541863</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">3.08488191408257</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">3.15286870274651</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">3.22576104530314</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">3.26673705138359</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">3.30771305746404</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">3.36188039111806</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">3.40213423868845</SimpleData>
+		<SimpleData name="StationId.y">10728</SimpleData>
+		<SimpleData name="Depth.y">1.436752</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0863</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">3.52657008345682</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">3.7611481280632</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">3.9491280141302</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">4.06491883994678</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">4.17018936203198</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">4.28049385051776</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">4.3579851573426</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">4.42303760912759</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">4.48955847516099</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">4.53987956773075</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">4.59020066030051</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">4.63523869973254</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">4.66650107904231</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.60626,42.9803600000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10729</SimpleData>
+		<SimpleData name="Depth.x">1.433134</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0863</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">1.3832824387206</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">1.65829620698232</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">1.8630748263453</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">1.99745115635079</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">2.10063231203132</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">2.22460032314527</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">2.29424533922887</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">2.36389035531246</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">2.4307612824415</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">2.4690479319759</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">2.50733458151029</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">2.55794677918891</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">2.5962334287233</SimpleData>
+		<SimpleData name="StationId.y">10729</SimpleData>
+		<SimpleData name="Depth.y">1.433134</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0863</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">2.64852258901102</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">2.92783437275863</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">3.13243996170757</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">3.26068130928741</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">3.37399449061141</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">3.48828984669347</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">3.56910975866506</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">3.63019970388057</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">3.69482018529609</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">3.74370369239867</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">3.79258719950125</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">3.83207045458329</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">3.85947440225749</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.61035,42.97905</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10730</SimpleData>
+		<SimpleData name="Depth.x">5.484684</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0862</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">1.43153976470923</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">1.58526002819982</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">1.69971027013814</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">1.78103737631994</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">1.84757363246249</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">1.92958463900552</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">1.99162357051791</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">2.04350702430522</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">2.10999767829946</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">2.16029591634388</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">2.20856522105848</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">2.26232195603801</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">2.30298735621177</SimpleData>
+		<SimpleData name="StationId.y">10730</SimpleData>
+		<SimpleData name="Depth.y">5.484684</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0862</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">2.7071951668642</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">2.83868710786964</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">2.97450372333181</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">3.04965199631769</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">3.11569263393566</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">3.20246593751577</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">3.25686587050594</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">3.31126580349611</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">3.38317860327581</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">3.42968363957874</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">3.47265465879455</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">3.52945925636189</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">3.57243027557771</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.61619,42.9786100000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10731</SimpleData>
+		<SimpleData name="Depth.x">2.794656</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0865</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">3.11607488884265</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">3.36557182655388</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">3.50517214749802</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">3.59680943441382</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">3.66026011756423</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">3.74279324297138</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">3.803179248782</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">3.8411527516964</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">3.89135099206025</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">3.92932449497466</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">3.96729799788907</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">4.01180490249049</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">4.03742603845393</SimpleData>
+		<SimpleData name="StationId.y">10731</SimpleData>
+		<SimpleData name="Depth.y">2.794656</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0865</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">4.38009837682787</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">4.640487583614</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">4.7825463044865</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">4.85926353926664</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">4.93001883072803</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">5.01543646212116</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">5.06181045678051</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">5.10818445143985</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">5.16948753785219</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">5.20909261268839</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">5.23567647348144</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">5.27081842593435</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">5.29740228672739</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.61392,42.97306</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10732</SimpleData>
+		<SimpleData name="Depth.x">3.130827</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0864</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">3.16792735446922</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">3.74974440170632</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">3.99680412096331</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">4.08917226739835</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">4.17997539612225</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">4.29358814592231</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">4.37856010088495</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">4.45917424767086</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">4.563796310583</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">4.63972657775401</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">4.71294765580835</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">4.80917817757023</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">4.87817107234553</SimpleData>
+		<SimpleData name="StationId.y">10732</SimpleData>
+		<SimpleData name="Depth.y">3.130827</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0864</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">4.38684092982306</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">5.0667254283292</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">5.25226345861388</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">5.35456410067767</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">5.44826609949795</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">5.56305114673914</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">5.6465089463056</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">5.72746776841356</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">5.83204457499383</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">5.90726428831959</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">5.98248400164536</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">6.07612131684449</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">6.14601743200735</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.6088099999999,42.97657</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10733</SimpleData>
+		<SimpleData name="Depth.x">3.101753</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0864</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">3.15012143842549</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">3.50666720000782</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">3.69797176963778</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">3.8193496481094</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">3.91367938801103</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">4.02982291775493</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">4.10312784416492</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">4.17643277057491</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">4.25296618916292</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">4.30590949370848</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">4.35885279825404</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">4.42180748470065</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">4.46184072685704</SimpleData>
+		<SimpleData name="StationId.y">10733</SimpleData>
+		<SimpleData name="Depth.y">3.101753</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0864</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">4.40690454361495</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">4.7815297717142</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">4.97738331609701</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">5.08529273596997</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">5.18665788945516</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">5.29574211427605</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">5.37617713369708</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">5.44215983937118</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">5.52134472224258</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">5.58124577372765</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">5.62856661171092</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">5.68354154089847</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">5.72512846941612</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.6034799999999,42.9797800000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10734</SimpleData>
+		<SimpleData name="Depth.x">6.110555</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0863</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">3.48084181835299</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">4.9993977524364</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">6.27844241075528</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">6.84955129990179</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">7.20880598433154</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">7.46430185934869</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">7.59696884872827</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">7.61798387175229</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">7.64231312749173</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">7.66071749898026</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">7.6791218704688</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">7.70345112620823</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">7.72185549769677</SimpleData>
+		<SimpleData name="StationId.y">10734</SimpleData>
+		<SimpleData name="Depth.y">6.110555</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0863</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">4.71493511260848</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">6.25027897178831</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">7.5436553969601</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">8.11710793091784</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">8.46940795823642</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">8.73398919893493</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">8.83694713146207</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">8.89915454491661</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">8.98138827247245</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">9.01085537488166</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">9.02634509087324</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">9.04682138162434</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">9.06231109761593</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.6007099999999,42.98314</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10735</SimpleData>
+		<SimpleData name="Depth.x">11.021905</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0862</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">1.39032212612168</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">1.57008758705898</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">1.69224903281735</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">1.77223211204594</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">1.84489799208681</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">1.93581308739508</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">2.0043386935408</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">2.06938040156812</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">2.15536086274891</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">2.21927699540793</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">2.28073046226356</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">2.36196752662824</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">2.42278375116092</SimpleData>
+		<SimpleData name="StationId.y">10735</SimpleData>
+		<SimpleData name="Depth.y">11.021905</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0862</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">2.65358777009695</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">2.83083129797468</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">2.96236246261418</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">3.04351999603815</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">3.11351807013987</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">3.20573485935561</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">3.27208139518265</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">3.3384279310097</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">3.42470461810671</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">3.48742410013434</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">3.55014358216197</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">3.63161274814811</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">3.69159706290046</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.6048,42.98474</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10736</SimpleData>
+		<SimpleData name="Depth.x">8.01013</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0861</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">2.82555489215911</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">4.16310976615434</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">5.34775962635987</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">5.97424146080905</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">6.44339892407783</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">6.8952986441639</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">7.14608517038684</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">7.33373541655641</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">7.51569673270899</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">7.62040369355317</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">7.68526908435385</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">7.77101646683912</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">7.82619048360791</SimpleData>
+		<SimpleData name="StationId.y">10736</SimpleData>
+		<SimpleData name="Depth.y">8.01013</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0861</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">4.04453747482232</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">5.41784541354887</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">6.61333882382063</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">7.2365111349604</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">7.70676942506746</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">8.16010609438787</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">8.42004223364953</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">8.6109667917133</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">8.79708783618391</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">8.88039933130662</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">8.96249674049478</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">9.03818423851985</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">9.08232205348591</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.60932,42.9873000000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10737</SimpleData>
+		<SimpleData name="Depth.x">6.788754</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0859</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">3.27279999462517</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">4.62604205588828</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">5.11242477922718</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">5.25899958175199</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">5.37721046323815</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">5.4684735841483</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">5.5291157770832</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">5.58975797001809</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">5.62682247671111</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">5.6500849708551</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">5.67334746499908</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">5.70409880956516</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">5.72736130370914</SimpleData>
+		<SimpleData name="StationId.y">10737</SimpleData>
+		<SimpleData name="Depth.y">6.788754</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0859</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">4.48774203725969</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">5.88337018541026</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">6.38735386664197</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">6.52905980909227</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">6.6394611518958</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">6.74687666145696</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">6.80741169991634</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">6.82881868077621</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">6.85711717020159</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">6.87852415106147</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">6.89993113192134</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">6.92822962134672</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">6.94963660220659</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.6112199999999,42.9927000000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10738</SimpleData>
+		<SimpleData name="Depth.x">3.647942</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0858</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">2.8968151809846</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">3.50213640391154</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">3.65922264989899</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">3.73338458484014</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">3.80169680699023</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">3.82374000566514</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">3.84041504174324</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">3.85709007782135</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">3.87913327649625</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">3.89580831257436</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">3.91248334865246</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">3.93452654732737</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">3.95120158340547</SimpleData>
+		<SimpleData name="StationId.y">10738</SimpleData>
+		<SimpleData name="Depth.y">3.647942</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0858</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">4.1031323471542</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">4.80021163443619</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">4.93543967121346</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">5.00499974436645</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">5.01855332147609</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">5.03647017584354</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">5.05002375295318</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">5.06357733006282</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">5.08149418443028</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">5.09504776153992</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">5.10860133864956</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">5.12651819301701</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">5.14007177012666</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.61538,42.99343</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10739</SimpleData>
+		<SimpleData name="Depth.x">3.938144</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0859</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">2.10189051652758</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">2.93463556196699</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">3.25107506719618</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">3.42589313045451</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">3.56339662813556</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">3.696658777384</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">3.78821524767377</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">3.83874452115007</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">3.8975283982496</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">3.94199668463136</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">3.98646497101312</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">4.01919222135129</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">4.03805336878264</SimpleData>
+		<SimpleData name="StationId.y">10739</SimpleData>
+		<SimpleData name="Depth.y">3.938144</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0859</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">3.34343469474433</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">4.22057178987342</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">4.51929024140294</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">4.6912746191927</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">4.8310167257577</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">4.97168452800728</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">5.04517225707201</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">5.10672281938281</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">5.18808823695758</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">5.2179201720088</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">5.24014062617177</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">5.26951446881095</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">5.29173492297392</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.61735,42.9886100000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10740</SimpleData>
+		<SimpleData name="Depth.x">9.971734</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.086</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">1.78401365791976</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">2.3179540873708</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">2.60848270136518</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">2.7589047433578</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">2.85433119461846</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">2.95315054365682</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">3.00852005250446</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">3.0313446040459</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">3.06151701998174</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">3.08434157152318</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">3.10716612306462</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">3.13733853900045</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">3.16016309054189</SimpleData>
+		<SimpleData name="StationId.y">10740</SimpleData>
+		<SimpleData name="Depth.y">9.971734</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.086</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">3.03714939097516</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">3.60947616010239</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">3.86953337049291</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">4.02597133252562</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">4.12647308819557</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">4.21046214947861</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">4.22818469923544</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">4.24590724899227</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">4.26933518542887</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">4.2870577351857</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">4.30478028494253</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">4.32820822137913</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">4.34593077113596</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.61903,42.9849600000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10741</SimpleData>
+		<SimpleData name="Depth.x">4.238335</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0861</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">2.01232150373454</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">2.37081947208607</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">2.57134382342577</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">2.69021124160069</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">2.8022909979003</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">2.90365143371391</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">2.98032764341521</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">3.03407244544982</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">3.09465778716295</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">3.14048882891738</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">3.18631987067182</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">3.27280584768407</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">3.34394437740206</SimpleData>
+		<SimpleData name="StationId.y">10741</SimpleData>
+		<SimpleData name="Depth.y">4.238335</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0861</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">3.27699033522985</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">3.63990289022351</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">3.83655119477632</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">3.96151312772257</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">4.06093495602384</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">4.17733715742142</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">4.23937789681843</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">4.292402948573</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">4.36249825422021</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">4.41045881371446</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">4.4461843955848</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">4.4934110459654</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">4.52913662783574</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.62465,42.97803</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10742</SimpleData>
+		<SimpleData name="Depth.x">8.684425</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0861</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">1.42514806667542</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">1.58196276504928</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">1.69869193234795</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">1.78046464205242</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">1.84697877541128</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">1.92857438832308</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">1.99029908668403</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">2.03810841956382</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">2.09787876977421</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">2.14309329425672</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">2.18830781873922</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">2.23575308037062</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">2.26937662642197</SimpleData>
+		<SimpleData name="StationId.y">10742</SimpleData>
+		<SimpleData name="Depth.y">8.684425</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0861</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">2.69795987480422</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">2.83330662933113</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">2.96962544840806</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">3.04750043271906</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">3.11483413970624</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">3.20291126230219</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">3.25390051666405</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">3.30488977102591</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">3.3722938989042</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">3.41639831196027</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">3.45231001558962</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">3.49978270555253</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">3.53569440918188</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.6277899999999,42.9779600000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10743</SimpleData>
+		<SimpleData name="Depth.x">2.82685</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0861</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">2.61934413387834</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">2.97515797030335</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">3.12148655273871</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">3.2151676826254</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">3.28470845934261</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">3.37663636582539</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">3.4258713308259</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">3.46483243455121</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">3.51633621217352</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">3.55529731589884</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">3.59425841962415</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">3.62523620157607</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">3.6467218453257</SimpleData>
+		<SimpleData name="StationId.y">10743</SimpleData>
+		<SimpleData name="Depth.y">2.82685</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0861</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">3.87524598813564</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">4.25118916023737</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">4.39731865706736</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">4.4783864457118</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">4.55872151281881</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">4.64012259331992</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">4.68977317895266</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">4.73942376458541</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">4.80237419892893</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">4.8256786880994</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">4.84898317726988</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">4.87979003624132</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">4.90309452541179</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.62684,42.9754</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10744</SimpleData>
+		<SimpleData name="Depth.x">9.417934</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0864</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">1.42564693371114</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">1.5711519831</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">1.68893349996794</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">1.76807929171979</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">1.82292950579544</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">1.87372879328364</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">1.91215697079546</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">1.95058514830729</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">2.00041855251122</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">2.01203643342111</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">2.02365431433099</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">2.03901231750882</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">2.0506301984187</SimpleData>
+		<SimpleData name="StationId.y">10744</SimpleData>
+		<SimpleData name="Depth.y">9.417934</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0864</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">2.701904724084</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">2.83325114508505</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">2.96257405449816</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">3.03259376088963</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">3.08538272945548</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">3.15516595010279</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">3.20230465749114</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">3.21759840176716</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">3.23781563200165</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">3.25310937627768</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">3.2684031205537</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">3.28862035078819</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">3.30391409506422</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.6239199999999,42.96941</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10745</SimpleData>
+		<SimpleData name="Depth.x">9.25647</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0863</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">2.97109585830952</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">4.13682465175125</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">5.06172008299485</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">5.57427154461057</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">5.95831036537696</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">6.32212744894904</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">6.51891367264817</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">6.66547499583563</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">6.81168821088858</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">6.87028078712887</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">6.92887336336916</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">7.00369055046724</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">7.03785941002786</SimpleData>
+		<SimpleData name="StationId.y">10745</SimpleData>
+		<SimpleData name="Depth.y">9.25647</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0863</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">4.20002223953945</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">5.38311006089359</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">6.31793462502534</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">6.83470774706806</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">7.22525179782661</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">7.59201078045441</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">7.80035904351667</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">7.9351972245439</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">8.06748927866579</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">8.14770650756733</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">8.21136917850715</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">8.25454404891275</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">8.28720457755465</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.62706,42.9699200000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10746</SimpleData>
+		<SimpleData name="Depth.x">11.983134</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0864</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">3.06371266968367</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">4.18101083641428</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">5.12482041820411</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">5.82594179697787</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">6.4629003139014</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">7.18607930954877</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">7.67925117571049</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">8.13292228435031</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">8.66548003530466</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">9.01493902876049</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">9.32344311977792</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">9.6967553025339</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">9.95783606367618</SimpleData>
+		<SimpleData name="StationId.y">10746</SimpleData>
+		<SimpleData name="Depth.y">11.983134</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0864</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">4.3039611939418</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">5.42101459983005</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">6.38511885010787</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">7.08754550714417</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">7.71938323949265</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">8.44165641177924</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">8.93984560772437</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">9.39615334136753</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">9.91879856573165</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">10.2683607782708</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">10.5877149729707</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">10.9647619275936</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">11.2255179694276</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.62538,42.96759</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">10747</SimpleData>
+		<SimpleData name="Depth.x">11.403658</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0865</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">1.42927909300948</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">1.57499985114707</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">1.69228734601434</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">1.77251167521411</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">1.83074258589542</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">1.89256516233879</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">1.93933213603613</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">1.98609910973346</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">2.01874106377419</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">2.03703054618834</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">2.0553200286025</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">2.07949740924671</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">2.09778689166086</SimpleData>
+		<SimpleData name="StationId.y">10747</SimpleData>
+		<SimpleData name="Depth.y">11.403658</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0865</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">2.7059414251381</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">2.8328510817985</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">2.9640172060195</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">3.03722246196912</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">3.09562387020309</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">3.17282633252855</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">3.21319319357364</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">3.23786680315891</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">3.27048354087196</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">3.29515715045722</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">3.31983076004249</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">3.35244749775554</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">3.3771211073408</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.6221,42.96781</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">18579</SimpleData>
+		<SimpleData name="Depth.x">8.229945</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0856</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">3.81660402549668</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">5.38056156485119</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">5.93381694797107</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">6.1104723877426</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">6.24458962916182</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">6.37896549794336</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">6.43573796072837</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">6.4808006416518</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">6.54037026559543</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">6.58543294651885</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">6.62432719847257</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">6.67184752142233</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">6.70779525801523</SimpleData>
+		<SimpleData name="StationId.y">18579</SimpleData>
+		<SimpleData name="Depth.y">8.229945</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0856</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">5.02526530979117</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">6.63902722894999</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">7.20697738982299</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">7.38590488197522</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">7.51245952138242</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">7.63904146660967</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">7.70359087604453</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">7.7681402854794</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">7.81938030570313</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">7.84277638099728</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">7.86617245629142</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">7.89710038553286</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">7.92049646082701</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.59819,43.00341</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">18580</SimpleData>
+		<SimpleData name="Depth.x">14.927289</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0856</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">2.57428567869427</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">3.60768175614316</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">4.34030452138021</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">4.87173544352172</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">5.28296297039417</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">5.68002930232979</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">5.89361783140488</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">6.05822296621267</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">6.22265489553241</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">6.30580368168432</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">6.38895246783622</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">6.53564370759532</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">6.68278043781584</SimpleData>
+		<SimpleData name="StationId.y">18580</SimpleData>
+		<SimpleData name="Depth.y">14.927289</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0856</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">3.80478581261964</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">4.86631671813969</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">5.58904735682233</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">6.13379939254704</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">6.54964433962832</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">6.94382797994102</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">7.16414126730807</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">7.32123648772842</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">7.47472457781958</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">7.57013823597103</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">7.6473040661592</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">7.73832297147684</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">7.81519895733789</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.6077299999999,43.00194</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#wave_height_annual_return">
+		<SimpleData name="StationId.x">18581</SimpleData>
+		<SimpleData name="Depth.x">8.785953</SimpleData>
+		<SimpleData name="Datum_Conv.x">-0.0855</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1">2.4248893505055</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2">4.02853450892279</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5">4.90889203579411</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10">5.81857324915456</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_20">6.40265703506794</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_50">6.83424064572351</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_100">7.02341601371408</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_200">7.12667089267864</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_500">7.20843971821597</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_1000">7.22223568938031</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_2000">7.23603166054466</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_5000">7.25426894242307</SimpleData>
+		<SimpleData name="MEAN_WH_ARI_10000">7.26806491358741</SimpleData>
+		<SimpleData name="StationId.y">18581</SimpleData>
+		<SimpleData name="Depth.y">8.785953</SimpleData>
+		<SimpleData name="Datum_Conv.y">-0.0855</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1">3.65802201993575</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2">5.29303250945884</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5">6.17662923877961</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10">7.08512153858516</SimpleData>
+		<SimpleData name="CL95_WH_ARI_20">7.66475615212785</SimpleData>
+		<SimpleData name="CL95_WH_ARI_50">8.09813759420787</SimpleData>
+		<SimpleData name="CL95_WH_ARI_100">8.28179709646945</SimpleData>
+		<SimpleData name="CL95_WH_ARI_200">8.40588906508493</SimpleData>
+		<SimpleData name="CL95_WH_ARI_500">8.44771916110079</SimpleData>
+		<SimpleData name="CL95_WH_ARI_1000">8.4793624071878</SimpleData>
+		<SimpleData name="CL95_WH_ARI_2000">8.51100565327481</SimpleData>
+		<SimpleData name="CL95_WH_ARI_5000">8.55283574929066</SimpleData>
+		<SimpleData name="CL95_WH_ARI_10000">8.58447899537767</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-70.6065,43.0065900000001</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
