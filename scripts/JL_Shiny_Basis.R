@@ -1,12 +1,11 @@
-# script to plot shapes - basis for shiny
+# script to load and plot shapes - basis for shiny
 
-
-
+# libraries
 library(tidyverse)
 library(here)
 
 
-
+# load .rds objects of polygons and appledore map
 load( here("data","shapes_to_plot","spp_shapes_cleaned.rds"))
 load( here("data","shapes_to_plot","appledore.rds"))
 
