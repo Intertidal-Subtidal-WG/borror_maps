@@ -7,6 +7,7 @@ library(here)
 data <- read.csv(here("data","Maps_data",'bmaps_data_total.csv')) %>% janitor::clean_names()
 
 
+data14 %>%distinct(species)
   
 data_separated <- 
   data %>%
