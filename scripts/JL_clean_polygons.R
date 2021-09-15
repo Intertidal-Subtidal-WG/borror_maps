@@ -6,12 +6,12 @@ library(here)
 
 # can we find area of mixed vs pure
 
-m82 <- read_sf(here("output maps","Map_Shapefiles","Borror_1982_draft.shp")) %>% janitor::clean_names()
-m83 <- read_sf(here("output maps","Map_Shapefiles","Borror_1983_draft.shp")) %>% janitor::clean_names()
-m84 <- read_sf(here("output maps","Map_Shapefiles","Borror_1984_draft.shp")) %>% janitor::clean_names()
-m87 <- read_sf(here("output maps","Map_Shapefiles","Borror_1987_draft.shp")) %>% janitor::clean_names()
-m90 <- read_sf(here("output maps","Map_Shapefiles","Borror_1990_draft.shp")) %>% janitor::clean_names()
-m14 <- read_sf(here("output maps","Map_Shapefiles","Borror_2014_draft.shp")) %>% janitor::clean_names()
+m82 <- read_sf(here("output maps","Map_Shapefiles","Borror_1982_done.shp")) %>% janitor::clean_names()
+m83 <- read_sf(here("output maps","Map_Shapefiles","Borror_1983_done.shp")) %>% janitor::clean_names()
+m84 <- read_sf(here("output maps","Map_Shapefiles","Borror_1984_done.2.shp")) %>% janitor::clean_names()
+m87 <- read_sf(here("output maps","Map_Shapefiles","Borror_1987_done.2.shp")) %>% janitor::clean_names()
+m90 <- read_sf(here("output maps","Map_Shapefiles","Borror_1990_done.shp")) %>% janitor::clean_names()
+m14 <- read_sf(here("output maps","Map_Shapefiles","Borror_2014_done.shp")) %>% janitor::clean_names()
 
 maine <- read_sf(here("data","Maine_State_Boundary_Polygon_Feature","Maine_State_Boundary_Polygon_Feature.shp"))
 maine <- st_transform(maine, crs =4326 )
@@ -20,12 +20,12 @@ appledore <- maine %>%
 
 rm(maine)
 
-#colnames(m82)
-#colnames(m83)
-#colnames(m84)
-#colnames(m87)
-#colnames(m90)
-#colnames(m14)
+ colnames(m82)
+ colnames(m83)
+ colnames(m84)
+ colnames(m87)
+ colnames(m90)
+ colnames(m14)
 
 shapes_full <- 
   bind_rows(m82,
@@ -82,8 +82,8 @@ shapes_cleaned <- shapes_full %>%
   mutate(species = str_trim(species)) %>%
   
   # manually make some changes
-  mutate(species_general = case_when(species %in% c("Saccharina latissima", "Saccharina longicruris","Saccharina", "Kelp") ~ "Saccharina",
-                                     species %in% c("Reds only","red algae","Red algae","Gigartinales","Tough coralline") ~ "Mixed reds",
+  mutate(species_general = case_when(species %in% c("Saccharina latissima", "Saccharina longicruris","Saccharina", "Kelp", "light kelp") ~ "Saccharina",
+                                     species %in% c("Reds only","red algae","Red algae","Gigartinales","Tough coralline", "Red") ~ "Mixed reds",
                                      species %in% c("Chorda filum","Halosiphon tomentosus","Halosiphon tomentosus")  ~ "Rope Kelps",
                                      TRUE ~ species)) %>%
   
@@ -110,7 +110,7 @@ target_species <- unique(shapes_cleaned$species_general)[1]
 appledore %>%
   ggplot() +
   geom_sf(alpha=.4, size=.15) +
-    geom_sf(data = shapes_cleaned #%>% filter(species_general %in% target_species)
+    geom_sf(data = shapes_cleaned %>% filter(species_general %in% target_species)
             ,
             aes(alpha=I(percent_cover), geometry = geometry, fill=species_general, color = species_general),
             size=.05,
