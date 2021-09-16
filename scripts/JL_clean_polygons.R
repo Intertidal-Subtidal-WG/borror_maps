@@ -100,6 +100,8 @@ save(shapes_cleaned,
 save(appledore,
      file = here("data","shapes_to_plot","appledore.rds"))
 
+# write appledore as .shp for andrea
+#st_write(appledore, "data/shapes_to_plot/appledore.shp")
 
 
 # if desired, make a target_species column to subset the data in the map 
@@ -110,7 +112,7 @@ target_species <- unique(shapes_cleaned$species_general)[1]
 appledore %>%
   ggplot() +
   geom_sf(alpha=.4, size=.15) +
-    geom_sf(data = shapes_cleaned %>% filter(species_general %in% target_species)
+    geom_sf(data = shapes_cleaned #%>% filter(species_general %in% target_species)
             ,
             aes(alpha=I(percent_cover), geometry = geometry, fill=species_general, color = species_general),
             size=.05,
