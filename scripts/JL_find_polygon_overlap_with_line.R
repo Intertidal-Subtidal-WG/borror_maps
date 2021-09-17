@@ -17,6 +17,9 @@ load( here("data","shapes_to_plot","appledore.rds"))
 shapes_cleaned <- st_as_sf(shapes_cleaned, crs =4326 )
 line15 <- st_transform(line15, crs=4326)
 
+ggplot()+ 
+  geom_sf(data = appledore, alpha=.2, color="transparent")+
+  geom_sf(data = line15 %>% slice(2))
 
 # test to make sure we can find intersections
 test <- st_intersection(line15, shapes_cleaned$geometry[1])
@@ -72,9 +75,84 @@ for (i in 1:nrow(shapes_cleaned)){
   print(i)
 }
 
-# not working: 219, 220, 265, 366, 367, 373, 374, 377, 378, 
-# 382, 383, 384, 390, 391, 392, 393, 394, 395, 396, 397, 408, 417, 
-df %>%
-  filter(is.na(length)) %>% group_by(year) %>% tally()
+# ok, so now we have a df of each polygon and it's intersection with the island perimeter line
+
+df <- df %>%
+  # drop rows with NA length, meaning that line and polygon don't intersect
+  drop_na(length) %>%
+  
+  # find overlapping line segments
+  group_by(year, geometry) %>% add_count() %>%
+  arrange(desc(n)) %>%
+  
+  # fix area to divide by overlapping species
+  mutate(fixed_length = length/n) %>% 
+  arrange(year)
 
 
+
+save(df,
+     file = here("data","shapes_to_plot","island_perimeter_segments.rds"))
+
+
+
+total_length <- st_length(line15) %>% sum()
+# so total perimeter of island = 5610.871 meters
+
+df_percents <- df %>%
+  mutate(percent = fixed_length/total_length*100) %>%
+  group_by(year, species_general) %>%
+  summarize(sum = sum(percent)) %>%
+  mutate(sum = as.numeric(sum))
+         
+theme_set(ggthemes::theme_few())
+
+community_plot <- df_percents %>%      
+  #filter(year == 1982) %>%
+  ungroup() %>%
+  ggplot(aes(x=as.character(year),y=sum, fill = species_general)) +
+  geom_col() +
+  ggthemes::theme_few() +
+  labs(x="Year",
+       y = "Percent of Island Perimeter",
+       fill = "Species Group") +
+  scale_fill_manual(values = PNWColors::pnw_palette("Bay",8))+
+  theme(legend.key.height = unit(1.3,"cm"))
+
+
+ggsave(community_plot,
+       file = here("figures","community_change_plot.png"),
+       dpi=300)
+
+df_percents %>% group_by(year) %>%
+  summarize(total = sum(sum))
+
+
+# looks like all years only have ~ 85% cover of the line... why?
+
+ggplot() +
+  geom_sf(data = appledore) +
+  geom_sf(data = line15) + 
+  geom_sf(data = shapes_cleaned %>% filter(year ==1982), size = 0)
+
+
+
+
+
+# now facet by species
+faceted_perimeter_change <- df %>%
+  group_by(year, species_general) %>%
+  summarize(length_sum = sum(fixed_length)) %>%
+  ggplot(aes(x=as.character(year), y = length_sum, fill=species_general)) +
+  geom_bar(stat="identity", show.legend = F) +
+  facet_wrap(~species_general, scales = "free_y", nrow = 2) +
+  scale_fill_manual(values = PNWColors::pnw_palette("Bay",8)) +
+  labs(x = "Year",y="Total Length (m)") 
+
+
+ggsave(faceted_perimeter_change,
+       file = here("figures","faceted_perimeter_change.png"),
+       dpi=300,
+       width = 10,
+       height = 5,
+       unit= "in")
