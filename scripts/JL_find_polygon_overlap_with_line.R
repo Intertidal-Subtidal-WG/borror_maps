@@ -1,6 +1,6 @@
 # JL script to ST crop andrea's line
 
-install.packages("lwgeom")
+#install.packages("lwgeom")
 library(lwgeom)
 library(tidyverse)
 library(here)
@@ -43,6 +43,12 @@ df <- tibble(species_general=rep(NA,times = nrow(shapes_cleaned)),
              geometry = rep(NA,times = nrow(shapes_cleaned)),
              length = rep(NA,times = nrow(shapes_cleaned)))
 
+
+
+# Jarrett's solution: st_make_valid to fix polygons
+shapes_cleaned <- shapes_cleaned %>% 
+  mutate(geometry = st_make_valid(geometry))
+
 # loop to get geometries
 for (i in 1:nrow(shapes_cleaned)){
   # make species in row i same as species in row i of shapes_clean
@@ -53,15 +59,15 @@ for (i in 1:nrow(shapes_cleaned)){
   
   # if an intersection between polygon and line exists, take that intersection. if not, use NA
   df$geometry[i] =
-    ifelse(length(st_intersection(shapes_cleaned_2$geometry[i], line15)) == 0,
+    ifelse(length(st_intersection(shapes_cleaned$geometry[i], line15)) == 0,
            NA,
-           st_intersection(shapes_cleaned_2$geometry[i], line15))
+           st_intersection(shapes_cleaned$geometry[i], line15))
   
   # if an intersection between polygon and line exists, take that length if not, use NA
   df$length[i] = 
-    ifelse(length(st_intersection(shapes_cleaned_2$geometry[i], line15)) == 0,
+    ifelse(length(st_intersection(shapes_cleaned$geometry[i], line15)) == 0,
            NA,
-           st_length(  st_intersection(shapes_cleaned_2$geometry[i], line15)) )
+           st_length(  st_intersection(shapes_cleaned$geometry[i], line15)) )
   # clock
   print(i)
 }
@@ -72,8 +78,3 @@ df %>%
   filter(is.na(length)) %>% group_by(year) %>% tally()
 
 
-
-# Jarrett's solution: lwgeom_make_valid
-shapes_cleaned_2 <- shapes_cleaned %>% 
-  rowwise() %>% 
-  summarize(geometry = lwgeom_make_valid(geometry))
