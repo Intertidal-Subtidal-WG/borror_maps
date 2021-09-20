@@ -90,10 +90,10 @@ df <- df %>%
   arrange(year)
 
 
-
-save(df,
-     file = here("data","shapes_to_plot","island_perimeter_segments.rds"))
-
+# save out the df as .rds file
+#save(df,
+#     file = here("data","shapes_to_plot","island_perimeter_segments.rds"))
+#
 
 
 total_length <- st_length(line15) %>% sum()

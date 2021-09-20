@@ -20,6 +20,7 @@ appledore <- maine %>%
 
 rm(maine)
 
+# check that all have same columns
  colnames(m82)
  colnames(m83)
  colnames(m84)
@@ -27,6 +28,7 @@ rm(maine)
  colnames(m90)
  colnames(m14)
 
+ # merge individual maps
 shapes_full <- 
   bind_rows(m82,
             m83,
@@ -51,18 +53,18 @@ shapes_full %>%
 
 
 shapes_cleaned <- shapes_full %>%
-  # number the polygons
+  # find max xpecies listed in one polygon
   group_by(year) %>%
   mutate(polygon_number = c(1:n())) %>%
   ungroup() %>%
-  mutate(n_species =  str_count(species, ',')+1) %>% #arrange(desc(n_species))
+  mutate(n_species =  str_count(species, ',')+1) %>% #arrange(desc(n_species)) # max mix is 4 species
 
-  
+  # change two specifically problematic names
   mutate_at(.vars = "species", .funs = str_replace, pattern ="Kelp red algae", replacement = "Kelp, Red algae") %>% 
   mutate_at(.vars = "species", .funs = str_replace, pattern ="Tough,coralline", replacement = "Tough coralline") %>%
   
-  
-  # change all "and"s to commas
+
+  # change all "and"s to commas so mixes are listed in comma-separated form
   mutate_at(.vars = "species", .funs = str_replace, pattern =" and", replacement = ",") %>%
   
   # separate shared species by comma
@@ -72,10 +74,10 @@ shapes_cleaned <- shapes_full %>%
   # pivot 4 species columns into 1
   pivot_longer(cols = c("species1","species2","species3","species4"), names_to = "spp_number", values_to = "species") %>%
   drop_na(species)  %>%
-  # drop "mix" and "mixed"
+  # drop "mix" and "mixed" and "sparse"
   mutate_at(.vars = "species", .funs = str_replace, pattern =" mix", replacement = "") %>%
   mutate_at(.vars = "species", .funs = str_replace, pattern ="Mixed ", replacement = "") %>%
-  mutate_at(.vars = "species", .funs = str_replace, pattern ="sparse ", replacement = "") %>%
+  mutate_at(.vars = "species", .funs = str_replace, pattern ="sparse ", replacement = "") %>% ## need to change this line if considering sparseness
   
   
   # remove white space 
