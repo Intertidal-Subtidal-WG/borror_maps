@@ -1,5 +1,7 @@
 #' ------------------------------
 #' Models to look at if exposure modified global change
+#' Notes to self - show var in temp in the NW
+#' Compare to SW and NE
 #' ------------------------------
 
 # libraries
@@ -34,8 +36,9 @@ em_tab <- . %>%
   kableExtra::kable_minimal()
 
 # 2014 analysis of barens
-urchin_mod <- betareg(std_length ~ quadrant+year,
-                      data = dat_1980s %>% filter(dominant_cover=="Urchin barrens"))
+urchin_mod <- betareg(std_length ~ quadrant + year,
+                      data = dat_1980s %>% 
+                        filter(dominant_cover=="Urchin barrens"))
 
 #LRT
 urchin_mod %>%
@@ -83,3 +86,8 @@ contrast(kelp_em, "pairwise", method = "fdr") %>%
   plot() + geom_vline(xintercept = 0) +
   labs(y = "", title = "Posthoc with fdr for Kelp")
 ggsave("figures/kelp_posthoc.jpg", dpi = 600)
+
+
+# 2014
+dat_2014 %>%
+  
