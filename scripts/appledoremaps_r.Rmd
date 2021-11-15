@@ -18,6 +18,8 @@ ct_data <- read.csv('~/Documents/GitHub/geospatial/data/transects/ct_clean.csv')
 pc_data <- read.csv('~/Documents/GitHub/geospatial/data/transects/pc_clean.csv')
 
 transect_info <- read.csv('~/Documents/GitHub/geospatial/data/transects/transect_info_decimals.csv')
+
+keen_data <- read.csv(here('data', 'transects', 'keen_all_methods_site_merged.csv'))
 ```
 
 ```{r base map}
@@ -72,7 +74,7 @@ transect_info2 <- transect_info %>% select(Transect, dec_lat, dec_long, Position
 #add the coordinates
 intertidal_combine <- merge(ct_pc, transect_info2, all.x = TRUE)
 ```
-  
+
 ```{r}
 #going to pick a species, lets go with urchins to start since we know they disappear
 #	Strongylocentrotus droebachiensis
@@ -131,28 +133,70 @@ anim_save('littorinatest2.gif', animation = last_animation())
 ```
 
 
+keen data
+```{r}
+#keep it to this for now in case there's other stuff
+keen_data2 <- keen_data %>%
+  select(NETWORK.x, YEAR.x, SITE.x, TRANSECT.x, PHYLUM, CLASS, GENUS, SPECIES,
+         START_LATITUDE, START_LONGITUDE, END_LATITUDE, END_LONGITUDE) %>%
+  na.omit(SPECIES)
 
+#rename
+
+keen_data_merge <- keen_data2 %>%
+  select(TRANSECT.x, YEAR.x, SPECIES, START_LATITUDE, START_LONGITUDE) %>%
+  rename(Organism = SPECIES,
+         Transect = TRANSECT.x,
+         dec_lat = START_LATITUDE,
+         dec_long = START_LONGITUDE, 
+         Year = YEAR.x)
+
+inter_merge <- intertidal_combine %>%
+  select(Transect, Year, Organism, dec_lat, dec_long) %>%
+  mutate(Transect = as.character(Transect))
+
+
+merged_inter_sub <- full_join(keen_data_merge, inter_merge)
+```
 
 
 ```{r}
 #sp records for specific years
-sp_list <- c('Strongylocentrotus droebachiensis', 'Cancer borealis', 'Cancer irroratus')
+#multiple species by this method can result in the species being different colors per map
+#sp_list <- c('Strongylocentrotus droebachiensis', 'Cancer borealis', 
+#             'Cancer irroratus', "Semibalanus balanoides")
+
+sp_list <- c('Strongylocentrotus droebachiensis')
 #sp_list <- c('Littorina saxatilis','Littorina littorea','Littorina obtusata')
 
 #filter whole dataset by those sp
-inter_sub <- intertidal_combine %>% subset(Organism %in% sp_list)
+#inter_sub <- intertidal_combine %>% subset(Organism %in% sp_list)
 
-y1982 <- inter_sub %>% subset(Year == 1982)
-y1983 <- inter_sub %>% subset(Year == 1983)
-y1984 <- inter_sub %>% subset(Year == 1984)
-y1985 <- inter_sub %>% subset(Year == 1985)
-y1986 <- inter_sub %>% subset(Year == 1986)
-y1987 <- inter_sub %>% subset(Year == 1987)
-y1988 <- inter_sub %>% subset(Year == 1988)
-y1989 <- inter_sub %>% subset(Year == 1989)
-y1990 <- inter_sub %>% subset(Year == 1990)
-y1991 <- inter_sub %>% subset(Year == 1991)
-y1992 <- inter_sub %>% subset(Year == 1992)
+merged_all_sub <- merged_inter_sub %>% subset(Organism %in% sp_list)
+
+#y1982 <- inter_sub %>% subset(Year == 1982)
+#y1983 <- inter_sub %>% subset(Year == 1983)
+#y1984 <- inter_sub %>% subset(Year == 1984)
+#y1985 <- inter_sub %>% subset(Year == 1985)
+#y1986 <- inter_sub %>% subset(Year == 1986)
+#y1987 <- inter_sub %>% subset(Year == 1987)
+#y1988 <- inter_sub %>% subset(Year == 1988)
+#y1989 <- inter_sub %>% subset(Year == 1989)
+#y1990 <- inter_sub %>% subset(Year == 1990)
+#y1991 <- inter_sub %>% subset(Year == 1991)
+#y1992 <- inter_sub %>% subset(Year == 1992)
+
+y1982 <- merged_all_sub %>% subset(Year == 1982)
+y1983 <- merged_all_sub %>% subset(Year == 1983)
+y1984 <- merged_all_sub %>% subset(Year == 1984)
+y1985 <- merged_all_sub %>% subset(Year == 1985)
+y1986 <- merged_all_sub %>% subset(Year == 1986)
+y1987 <- merged_all_sub %>% subset(Year == 1987)
+y1988 <- merged_all_sub %>% subset(Year == 1988)
+y1989 <- merged_all_sub %>% subset(Year == 1989)
+y1990 <- merged_all_sub %>% subset(Year == 1990)
+y1991 <- merged_all_sub %>% subset(Year == 1991)
+y1992 <- merged_all_sub %>% subset(Year == 1992)
 
 
 sp_1982 <- ggmap(apple_toner) +
@@ -269,14 +313,14 @@ sp_all
 sp_plots_m <- arrangeGrob(sp_1982, sp_1983, sp_1984, sp_1985, sp_1986, sp_1987,
                         sp_1988, sp_1989, sp_1990, sp_1991, sp_1992, sp_all, nrow = 3)
 
-ggsave(here("figures", "2021115_test.png"), plot = sp_plots_m, device = "png",
+ggsave(here("figures", "2021115_test_2.png"), plot = sp_plots_m, device = "png",
               width = 7, height = 8, units = 'in')
 
 
 sp_plots_s <- arrangeGrob(sp_1982, sp_1983, sp_1984, sp_1985, sp_1986, sp_1987,
                         sp_1988, sp_1989, sp_1990, sp_1991, sp_1992, nrow = 3)
 
-ggsave(here("figures", "2021115_test2.png"), plot = sp_plots_s, device = "png",
+ggsave(here("figures", "2021115_test2_2.png"), plot = sp_plots_s, device = "png",
        width = 7, height = 8, units = 'in')
 
 ```
