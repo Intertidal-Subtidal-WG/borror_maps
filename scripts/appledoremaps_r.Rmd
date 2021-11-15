@@ -8,6 +8,8 @@ library(ggplot2)
 library(ggmap)
 library(tidyverse)
 library(gganimate)
+library(gridExtra)
+library(here)
 ```
 
 
@@ -100,6 +102,204 @@ animate(inter_sub_map, fps = 2, width = 500, height = 500, renderer = magick_ren
 
 anim_save('littorinatest.gif', animation = last_animation())
 
+animate(inter_sub_map, fps = 1, width = 500, height = 500, renderer = file_renderer())
 
+anim
+
+
+```
+
+```{r}
+inter_sub_map2 <- ggmap(apple_toner) +
+  geom_jitter(data = inter_sub, aes( x = dec_long, y = dec_lat, color = Organism), show.legend = FALSE, width = .0002, height = .0002) +
+#    geom_point(data = inter_sub, aes( x = dec_long, y = dec_lat, color = 'red'), show.legend = FALSE) +
+  theme_classic() +
+    theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  labs(color = NULL, title = 'Littorina species, year: {closest_state}', x = NULL, y = NULL) +
+  transition_states(Year,
+                    transition_length = 1,
+                    state_length = 1) +
+  enter_appear() +
+  exit_shrink()
+
+
+
+animate(inter_sub_map2, fps = 1, width = 500, height = 500, renderer = sprite_renderer())
+
+anim_save('littorinatest2.gif', animation = last_animation())
+```
+
+
+
+
+
+```{r}
+#sp records for specific years
+sp_list <- c('Strongylocentrotus droebachiensis', 'Cancer borealis', 'Cancer irroratus')
+#sp_list <- c('Littorina saxatilis','Littorina littorea','Littorina obtusata')
+
+#filter whole dataset by those sp
+inter_sub <- intertidal_combine %>% subset(Organism %in% sp_list)
+
+y1982 <- inter_sub %>% subset(Year == 1982)
+y1983 <- inter_sub %>% subset(Year == 1983)
+y1984 <- inter_sub %>% subset(Year == 1984)
+y1985 <- inter_sub %>% subset(Year == 1985)
+y1986 <- inter_sub %>% subset(Year == 1986)
+y1987 <- inter_sub %>% subset(Year == 1987)
+y1988 <- inter_sub %>% subset(Year == 1988)
+y1989 <- inter_sub %>% subset(Year == 1989)
+y1990 <- inter_sub %>% subset(Year == 1990)
+y1991 <- inter_sub %>% subset(Year == 1991)
+y1992 <- inter_sub %>% subset(Year == 1992)
+
+
+sp_1982 <- ggmap(apple_toner) +
+  geom_jitter(data = y1982, aes( x = dec_long, y = dec_lat, color = Organism), show.legend = FALSE, width = .0002, height = .0002) +
+  theme_classic() +
+    theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  labs(color = NULL, title = "1982", x = NULL, y = NULL)
+
+sp_1982
+
+sp_1983 <- ggmap(apple_toner) +
+  geom_jitter(data = y1983, aes( x = dec_long, y = dec_lat, color = Organism), show.legend = FALSE, width = .0002, height = .0002) +
+  theme_classic() +
+    theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  labs(color = NULL, title = '1983', x = NULL, y = NULL)
+
+sp_1983
+
+sp_1984 <- ggmap(apple_toner) +
+  geom_jitter(data = y1984, aes( x = dec_long, y = dec_lat, color = Organism), show.legend = FALSE, width = .0002, height = .0002) +
+  theme_classic() +
+    theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  labs(color = NULL, title = "1984", x = NULL, y = NULL)
+
+sp_1984
+
+sp_1985 <- ggmap(apple_toner) +
+  geom_jitter(data = y1985, aes( x = dec_long, y = dec_lat, color = Organism), show.legend = FALSE, width = .0002, height = .0002) +
+  theme_classic() +
+    theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  labs(color = NULL, title = "1985", x = NULL, y = NULL)
+
+sp_1985
+
+sp_1986 <- ggmap(apple_toner) +
+  geom_jitter(data = y1986, aes( x = dec_long, y = dec_lat, color = Organism), show.legend = FALSE, width = .0002, height = .0002) +
+  theme_classic() +
+    theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  labs(color = NULL, title = "1986", x = NULL, y = NULL)
+
+sp_1986
+
+sp_1987 <- ggmap(apple_toner) +
+  geom_jitter(data = y1987, aes( x = dec_long, y = dec_lat, color = Organism), show.legend = FALSE, width = .0002, height = .0002) +
+  theme_classic() +
+    theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  labs(color = NULL, title = "1987", x = NULL, y = NULL)
+
+sp_1987
+
+sp_1988 <- ggmap(apple_toner) +
+  geom_jitter(data = y1988, aes( x = dec_long, y = dec_lat, color = Organism), show.legend = FALSE, width = .0002, height = .0002) +
+  theme_classic() +
+    theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  labs(color = NULL, title = "1988", x = NULL, y = NULL)
+
+sp_1988
+
+sp_1989 <- ggmap(apple_toner) +
+  geom_jitter(data = y1989, aes( x = dec_long, y = dec_lat, color = Organism), show.legend = FALSE, width = .0002, height = .0002) +
+  theme_classic() +
+    theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  labs(color = NULL, title = "1989", x = NULL, y = NULL)
+
+sp_1989
+
+sp_1990 <- ggmap(apple_toner) +
+  geom_jitter(data = y1990, aes( x = dec_long, y = dec_lat, color = Organism), show.legend = FALSE, width = .0002, height = .0002) +
+  theme_classic() +
+    theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  labs(color = NULL, title = "1990", x = NULL, y = NULL)
+
+sp_1990
+
+sp_1991 <- ggmap(apple_toner) +
+  geom_jitter(data = y1991, aes( x = dec_long, y = dec_lat, color = Organism), show.legend = FALSE, width = .0002, height = .0002) +
+  theme_classic() +
+    theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  labs(color = NULL, title = "1991", x = NULL, y = NULL)
+
+sp_1991
+
+sp_1992 <- ggmap(apple_toner) +
+  geom_jitter(data = y1992, aes( x = dec_long, y = dec_lat, color = Organism), show.legend = FALSE, width = .0002, height = .0002) +
+  theme_classic() +
+    theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  labs(color = NULL, title = "1992", x = NULL, y = NULL)
+
+sp_1992
+
+sp_all <- ggmap(apple_toner) +
+  geom_jitter(data = inter_sub, aes( x = dec_long, y = dec_lat, color = Organism), show.legend = TRUE, width = .0002, height = .0002) +
+  theme_classic() +
+    theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) +
+  labs(color = NULL, title = NULL, x = NULL, y = NULL)
+
+sp_all
+
+
+
+
+sp_plots_m <- arrangeGrob(sp_1982, sp_1983, sp_1984, sp_1985, sp_1986, sp_1987,
+                        sp_1988, sp_1989, sp_1990, sp_1991, sp_1992, sp_all, nrow = 3)
+
+ggsave(here("figures", "2021115_test.png"), plot = sp_plots_m, device = "png",
+              width = 7, height = 8, units = 'in')
+
+
+sp_plots_s <- arrangeGrob(sp_1982, sp_1983, sp_1984, sp_1985, sp_1986, sp_1987,
+                        sp_1988, sp_1989, sp_1990, sp_1991, sp_1992, nrow = 3)
+
+ggsave(here("figures", "2021115_test2.png"), plot = sp_plots_s, device = "png",
+       width = 7, height = 8, units = 'in')
+
+```
+red_barren_kelp <- ggplot(df_reduced, aes(color = dominant_cover)) +
+  geom_sf(size = 2) +
+  facet_wrap(.~year) +
+  theme_void(base_size = 16) +
+  scale_color_manual(values = c("darkgreen", "darkmagenta", "red", "grey")) +
+  labs(color = "") +
+  theme(legend.position="bottom") 
+
+
+```{r}
+
+## will need to use jakes shapefile to make this method work
+sp_occur <- ggplot(inter_sub, aes(color = Organism)) +
+
+red_barren_kelp <- ggplot(df_reduced, aes(color = dominant_cover)) +
+  geom_sf(size = 2) +
+  facet_wrap(.~year) +
+  theme_void(base_size = 16) +
+  scale_color_manual(values = c("darkgreen", "darkmagenta", "red", "grey")) +
+  labs(color = "") +
+  theme(legend.position="bottom") 
 ```
 
