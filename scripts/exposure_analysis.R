@@ -24,7 +24,8 @@ polys <- bind_rows(#polys[1:2,],
   polys[1,]%>% st_make_valid(),
           st_difference(polys[3,], polys[4,]),
           st_difference(polys[4,], polys[2,])) %>%
-  mutate(geometry = st_cast(geometry, "POLYGON"))
+  mutate(geometry = st_cast(geometry, "POLYGON")) %>%
+  ungroup()
           
 
 
@@ -48,9 +49,9 @@ make_ns_split_df <- function(df, exposure_split = -70.6144){
   df
 }
 
-make_split_df <- function(df, polys = polys){
+make_split_df <- function(df, p = polys){
 
- out <-  polys %>%
+ out <-  p %>%
     group_by(Name) %>%
     nest() %>%
     summarize(cropped_lines = map(data, 
@@ -58,10 +59,10 @@ make_split_df <- function(df, polys = polys){
    unnest(cropped_lines) %>% 
    st_as_sf(crs = 4326) %>%
    #factor order by exposure
-   mutate(Name = factor(Name, levels = c("Southeast",
+   mutate(Name = factor(Name, levels = rev(c("Southeast",
                                          "Northeast",
                                          "Northwest",
-                                         "Southwest"))) %>%
+                                         "Southwest")))) %>%
    rename(quadrant = Name)
  
  out
@@ -69,16 +70,19 @@ make_split_df <- function(df, polys = polys){
 }
 
 
-#make the crops
-#vertical split at -70.61446
-exposure_split <- -70.61446
-#horizontal split at 42.986933 or 42.98775
+# #make the crops
+# #vertical split at -70.61446
+# exposure_split <- -70.61446
+# #horizontal split at 42.986933 or 42.98775
 df_exposure <- make_split_df(df)
+
 df_reduced_exposure <- make_split_df(df_reduced) %>%
   mutate(length = st_length(geometry)) %>%
   ungroup() %>%
   group_by(year, quadrant) %>%
   mutate(std_length = length/sum(length))
+
+write_csv(df_reduced_exposure, "data/df_reduced_exposure.csv")
 
 porp_length_by_reduced_group <- ggplot(df_reduced_exposure,
        aes(x=as.character(year), y = as.numeric(std_length), 
@@ -91,7 +95,8 @@ porp_length_by_reduced_group <- ggplot(df_reduced_exposure,
 #  facet_wrap(~dominant_cover) +
   scale_fill_manual(values = c("darkgreen", "darkmagenta", "red", "grey")) +
   scale_color_manual(values = c("darkgreen", "darkmagenta", "red", "grey")) +
-  labs(x = "Year",y="Porportion of Total Length") 
+  labs(x = "Year",y="Porportion of Total Length")   +
+  ylim(c(0,1))
 
 
 ggsave(porp_length_by_reduced_group,
