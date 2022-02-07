@@ -3,6 +3,7 @@ library(dplyr)
 library(purrr)
 library(lubridate)
 library(ggplot2)
+library(readr)
 
 #buoy 44005
 get_buoy <- function(a_year){
@@ -23,16 +24,33 @@ get_buoy <- function(a_year){
 
 
 b <- map_df(1980:1995, get_buoy)
+
+#write data
+write_csv(b, "data/44005_wave_height_monthly.csv")
+
+b <- read_csv("data/44005_wave_height_monthly.csv")
+
+#make annual derived data
 b_annual <- b %>%
   group_by(year) %>%
   summarize(max_wave_height = max(wave_height),
-            wave_height = mean(wave_height, na.rm=TRUE))
+            wave_height = mean(wave_height))
 
-write_csv(b, "data/44005_wave_height_monthly.csv")
 
 ggplot(b,
        aes(x = as.Date(time), y = wave_height)) +
   geom_line() +
+  scale_x_date(date_breaks = "1 year",
+               date_labels = "%Y") +
+  theme(axis.text.x = element_text(angle = 90)) +
+  facet_wrap(vars(month)) +
+  geom_vline(xintercept = as.Date("1990-1-01 00:00:00 UTC"), color = "red", lty = 2) +
+  geom_vline(xintercept = as.Date("1987-1-01 00:00:00 UTC"), color = "red", lty = 2)
+
+
+ggplot(b %>% filter(month %in% c(1,2,3,12)),
+       aes(x = as.Date(time), y = wave_height, color = as.factor(year))) +
+  geom_point() +
   scale_x_date(date_breaks = "1 year",
                date_labels = "%Y") +
   theme(axis.text.x = element_text(angle = 90))
