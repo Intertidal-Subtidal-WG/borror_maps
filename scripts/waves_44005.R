@@ -14,6 +14,7 @@ get_buoy <- function(a_year){
            year = year(time),
            month = month(time)) %>%
     filter(year == a_year) %>%
+    mutate(ifelse(wave_height>40, NA, wave_height)) %>%
     group_by(year, month) %>%
     summarize(wave_height = mean(wave_height, na.rm=TRUE),
               time = time[1]) %>%
@@ -23,10 +24,28 @@ get_buoy <- function(a_year){
 }
 
 
+
+#buoy 44005
+get_buoy_raw <- function(a_year){
+  b <- buoy("stdmet", 44005, a_year)
+  
+  b<- b$data %>%
+    mutate(time = ymd_hms(time),
+           year = year(time),
+           month = month(time)) %>%
+    filter(year == a_year) %>%
+    select(time, year, month, wave_height) %>%
+    mutate(ifelse(wave_height>40, NA, wave_height))
+
+  b
+}
+
 b <- map_df(1980:1995, get_buoy)
+b_raw <- map_df(1980:1995, get_buoy_raw)
 
 #write data
 write_csv(b, "data/44005_wave_height_monthly.csv")
+write_csv(b_raw, "data/44005_wave_height_raw.csv")
 
 b <- read_csv("data/44005_wave_height_monthly.csv")
 
@@ -36,6 +55,14 @@ b_annual <- b %>%
   summarize(max_wave_height = max(wave_height),
             wave_height = mean(wave_height))
 
+
+
+ggplot(b_raw,
+       aes(x = as.Date(time), y = wave_height)) +
+  geom_line() +
+  scale_x_date(date_breaks = "1 year",
+               date_labels = "%Y") +
+  theme(axis.text.x = element_text(angle = 90)) 
 
 ggplot(b,
        aes(x = as.Date(time), y = wave_height)) +
