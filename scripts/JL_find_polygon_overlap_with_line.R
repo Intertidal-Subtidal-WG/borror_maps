@@ -94,7 +94,7 @@ df <- df %>%
 #save(df,
 #     file = here("data","shapes_to_plot","island_perimeter_segments.rds"))
 #
-
+#load(here("data","shapes_to_plot","island_perimeter_segments.rds"))
 
 total_length <- st_length(line15) %>% sum()
 # so total perimeter of island = 5610.871 meters
@@ -104,7 +104,29 @@ df_percents <- df %>%
   group_by(year, species_general) %>%
   summarize(sum = sum(percent)) %>%
   mutate(sum = as.numeric(sum))
-         
+     
+#how much is barren?    
+df_percents %>%
+  filter(year<1995, species_general == "Urchin barrens")
+
+#how much is kelp?
+df_percents %>%
+  filter(year<1995, 
+         species_general != "Urchin barrens",
+         species_general != "Mixed reds") %>%
+  group_by(year) %>% summarize(percent = sum(sum))
+
+# how much is red
+#how much is kelp?
+df_percents %>%
+  filter(year<1995, 
+         species_general == "Mixed reds") 
+
+df_percents %>%
+  filter(year>1995, 
+         species_general == "Mixed reds") 
+
+
 theme_set(ggthemes::theme_few())
 
 community_plot <- df_percents %>%      
