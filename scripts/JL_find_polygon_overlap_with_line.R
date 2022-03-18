@@ -127,23 +127,89 @@ df_percents %>%
          species_general == "Mixed reds") 
 
 
+
+
+
 theme_set(ggthemes::theme_few())
 
-community_plot <- df_percents %>%      
+
+
+# set colors manually -----------------------------------------------------
+# here, i'm making a list of each "group" of species, which will be 
+# colored with shades of the same color
+colors <- 
+  tribble(
+    ~spp,                   ~color,
+    # kelps:
+    "<br><b>Kelps</b>",                 "transparent",
+    "Alaria esculenta",      paste(colorspace::darken("darkgreen",.3)),
+    "Rope Kelps",            "darkgreen",
+    "Laminaria digitata",    paste(colorspace::lighten("darkgreen",.3)),
+    "Saccharina",            paste(colorspace::lighten("darkgreen",.6)),
+    
+    # other non-kelp browns:
+    "<br><b>Other Browns</b>",          "transparent",
+    "Saccorhiza dermatodea", "gold",
+    
+    # reds:
+    "<br><b>Reds</b>",                  "transparent",
+    "Mixed reds",            paste(colorspace::darken("red",.3)),
+    
+    # greens:
+    "<br><b>Greens</b>",                "transparent",
+    "Codium fragile",        "chartreuse2",
+    
+    # other
+    "<br><b>Other</b>",                 "transparent",
+    "Urchin barrens",        "grey70",
+    
+
+  )
+
+# add a column of species groups
+df_percents <- df_percents %>%
+  ungroup() %>%
+  mutate(type = case_when(species_general %in% c("Alaria esculenta",   
+                                                 "Rope Kelps",         
+                                                 "Laminaria digitata", 
+                                                 "Saccharina") ~ "<br><b>Kelps</b>",
+                          species_general %in% c("Saccorhiza dermatodea") ~"<br><b>Other Browns</b>",
+                          species_general %in% c("Mixed reds") ~ "<br><b>Reds</b>",
+                          species_general %in% c("Codium fragile") ~ "<br><b>Greens</b>",
+                          species_general %in% c("Urchin barrens") ~ "<br><b>Other</b>"))
+
+# add blank rows for group names so that they show 
+# up in the legend with transparent keys
+df_percents2 <- df_percents %>%
+  bind_rows( df_percents %>% distinct(type) %>% mutate(species_general = type,
+                                                    year = 2014,
+                                                    sum = 0))
+
+# make plot
+community_plot <- df_percents2 %>%      
   #filter(year == 1982) %>%
   ungroup() %>%
-  ggplot(aes(x=as.character(year),y=sum, fill = species_general)) +
+  ggplot(aes(x=as.character(year),y=sum, 
+             fill = factor(species_general, levels = colors$spp))) +
   geom_col() +
   ggthemes::theme_few() +
   labs(x="Year",
        y = "Percent of Island Perimeter",
        fill = "Species Group") +
-  scale_fill_manual(values = PNWColors::pnw_palette("Bay",8))+
-  theme(legend.key.height = unit(1.3,"cm"))
+  scale_fill_manual(breaks = colors$spp,
+                    values = colors$color)+
+  theme(#legend.key.height = unit(.6,"cm"),
+        legend.text = element_markdown())
 
+# view plot
+community_plot
 
+# export plot
 ggsave(community_plot,
        file = here("figures","community_change_plot.png"),
+       width = 6,
+       height = 4,
+       units = "in",
        dpi=300)
 
 df_percents %>% group_by(year) %>%
