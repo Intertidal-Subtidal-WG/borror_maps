@@ -15,11 +15,24 @@ load( here("data","shapes_to_plot","appledore.rds"))
 
 # set crs values 
 shapes_cleaned <- st_as_sf(shapes_cleaned, crs =4326 )
+shapes_cleaned <- shapes_cleaned %>% 
+  mutate(species_general = stringr::str_to_sentence(species_general))
+
 line15 <- st_transform(line15, crs=4326)
 
 ggplot()+ 
-  geom_sf(data = appledore, alpha=.2, color="transparent")+
-  geom_sf(data = line15 %>% slice(2))
+  geom_sf(data = appledore)+
+  geom_sf(data = line15 %>% slice(2), color = "red") +
+  geom_sf(data = line15 %>% slice(1), color = "blue")
+# ok looks like our sf line is spit into two for some reason
+
+line15.2 <- st_union(line15)
+ggplot()+ 
+  geom_sf(data = appledore)+
+  geom_sf(data = line15.2, color = "red") 
+
+line15 <- line15.2
+rm(line15.2)
 
 # test to make sure we can find intersections
 test <- st_intersection(line15, shapes_cleaned$geometry[1])
@@ -30,7 +43,8 @@ test2 <- st_intersection(line15, shapes_cleaned$geometry[2])
 theme_set(ggthemes::theme_map())
 ggplot()+ 
   geom_sf(data = appledore)+
-  geom_sf(data = shapes_cleaned, alpha=.5, size=.2) +
+  geom_sf(data = shapes_cleaned, alpha=.5, size=.2,
+          aes(geometry = geometry)) +
   geom_sf(data = line15, color ="blue")+
   geom_sf(data = test, color="red")+
   geom_sf(data = test2, color="purple")
@@ -124,7 +138,7 @@ df_percents %>%
 
 df_percents %>%
   filter(year>1995, 
-         species_general == "Mixed reds") 
+         species_general == "Rope kelps") 
 
 
 
@@ -143,12 +157,12 @@ colors <-
     # kelps:
     "<br><b>Kelps</b>",                 "transparent",
     "Alaria esculenta",      paste(colorspace::darken("darkgreen",.3)),
-    "Rope Kelps",            "darkgreen",
+    "Rope kelps",            "darkgreen",
     "Laminaria digitata",    paste(colorspace::lighten("darkgreen",.3)),
     "Saccharina",            paste(colorspace::lighten("darkgreen",.6)),
     
     # other non-kelp browns:
-    "<br><b>Other Browns</b>",          "transparent",
+    "<br><b>Other browns</b>",          "transparent",
     "Saccorhiza dermatodea", "gold",
     
     # reds:
@@ -170,10 +184,10 @@ colors <-
 df_percents <- df_percents %>%
   ungroup() %>%
   mutate(type = case_when(species_general %in% c("Alaria esculenta",   
-                                                 "Rope Kelps",         
+                                                 "Rope kelps",         
                                                  "Laminaria digitata", 
                                                  "Saccharina") ~ "<br><b>Kelps</b>",
-                          species_general %in% c("Saccorhiza dermatodea") ~"<br><b>Other Browns</b>",
+                          species_general %in% c("Saccorhiza dermatodea") ~"<br><b>Other browns</b>",
                           species_general %in% c("Mixed reds") ~ "<br><b>Reds</b>",
                           species_general %in% c("Codium fragile") ~ "<br><b>Greens</b>",
                           species_general %in% c("Urchin barrens") ~ "<br><b>Other</b>"))
@@ -198,8 +212,7 @@ community_plot <- df_percents2 %>%
        fill = "Species Group") +
   scale_fill_manual(breaks = colors$spp,
                     values = colors$color)+
-  theme(#legend.key.height = unit(.6,"cm"),
-        legend.text = element_markdown())
+  theme(legend.text = element_markdown())
 
 # view plot
 community_plot
