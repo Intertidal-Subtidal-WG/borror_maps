@@ -90,5 +90,13 @@ ggsave(red_barren_kelp,
 save(df_reduced,
      file = here("data","shapes_to_plot","island_perimeter_red_barren_kelp.rds"))
 
+# check for colorblindness
+# clauswilke/colorblindr from github
+library(colorblindr)
+cvd_grid(red_barren_kelp)
 
 
+
+ggsave(red_barren_kelp,
+       file = here("figures","red_barren_kelp_map_colorblind.png"),
+       dpi=300)
