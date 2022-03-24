@@ -5,6 +5,7 @@ library(lwgeom)
 library(tidyverse)
 library(here)
 library(sf)
+library(ggtext)
 
 # load line at 1.5
 line15 <- read_sf(here("data","shapes_to_plot","appledore_outline_1.5.shp")) %>% janitor::clean_names()
@@ -151,31 +152,54 @@ theme_set(ggthemes::theme_few())
 # set colors manually -----------------------------------------------------
 # here, i'm making a list of each "group" of species, which will be 
 # colored with shades of the same color
+#014701, darkgreen, #4b944b, #82c882, #af9100, #dd0000, #76ee00, #b3b3b3
+pal <- c(
+  # kelps
+  paste(colorspace::darken("darkgreen",.3)),
+  "darkgreen",
+  paste(colorspace::lighten("darkgreen",.3)),
+  paste(colorspace::lighten("darkgreen",.6)),
+  
+  # non kelp browns
+  "#af9100",
+  
+  # reds
+  "#dd0000",
+  
+  # green
+  "#76ee00",
+  
+  #other
+  "grey70"
+)
+
+
+
 colors <- 
   tribble(
     ~spp,                   ~color,
     # kelps:
     "<br><b>Kelps</b>",                 "transparent",
-    "Alaria esculenta",      paste(colorspace::darken("darkgreen",.3)),
-    "Rope kelps",            "darkgreen",
-    "Laminaria digitata",    paste(colorspace::lighten("darkgreen",.3)),
-    "Saccharina",            paste(colorspace::lighten("darkgreen",.6)),
+    "<i>Alaria esculenta</i>",      pal[1],
+    "Rope kelps",            pal[2],
+    "<i>Laminaria digitata</i>",    pal[3],
+    "<i>Saccharina latissima</i>",            pal[4],
     
     # other non-kelp browns:
     "<br><b>Other browns</b>",          "transparent",
-    "Saccorhiza dermatodea", "gold",
+    "<i>Saccorhiza dermatodea</i>",            pal[5],
     
     # reds:
     "<br><b>Reds</b>",                  "transparent",
-    "Mixed reds",            paste(colorspace::darken("red",.3)),
+    "Mixed reds",           pal[6],
     
     # greens:
     "<br><b>Greens</b>",                "transparent",
-    "Codium fragile",        "chartreuse2",
+    "<i>Codium fragile</i>",        pal[7],
     
     # other
     "<br><b>Other</b>",                 "transparent",
-    "Urchin barrens",        "grey70",
+    "Urchin barrens",        pal[8],
     
 
   )
@@ -199,8 +223,22 @@ df_percents2 <- df_percents %>%
                                                     year = 2014,
                                                     sum = 0))
 
+# change species names to italic
+df_percents3 <- df_percents2 %>%
+  mutate(species_general = recode(species_general,
+                                  # change kelps
+                                  "Alaria esculenta" = "<i>Alaria esculenta</i>",
+                                  "Laminaria digitata" = "<i>Laminaria digitata</i>",
+                                  "Saccharina" = "<i>Saccharina latissima</i>",
+                                  # other browns
+                                  "Saccorhiza dermatodea" = "<i>Saccorhiza dermatodea</i>",
+                                  # greens
+                                  "Codium fragile" = "<i>Codium fragile</i>"))
+
+
+
 # make plot
-community_plot <- df_percents2 %>%      
+community_plot <- df_percents3 %>%      
   #filter(year == 1982) %>%
   ungroup() %>%
   ggplot(aes(x=as.character(year),y=sum, 
@@ -216,6 +254,10 @@ community_plot <- df_percents2 %>%
 
 # view plot
 community_plot
+
+library(colorblindr)
+cvd_grid(community_plot)
+
 
 # export plot
 ggsave(community_plot,
