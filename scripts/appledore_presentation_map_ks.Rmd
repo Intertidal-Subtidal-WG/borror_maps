@@ -109,5 +109,27 @@ ggplot(appledore) +
         axis.ticks = element_blank(),
         panel.background = element_rect(fill = '#806238') #rect in backgorund represents protected
         )
+
+
+ggsave(here('figures', 'exposed-protected.png'), device = png, height = 3.5, width = 3, units = 'in')
 ```
+
+
+
+
+
+
+```{r}
+library(ggmap)
+library(usmap)
+
+
+plot_usmap(include = .new_england, fill = 'grey88') +
+  theme(panel.background = element_rect(fill = '#94b4d8'))
+
+ggsave(here('figures', 'new-england.png'), device = png, height = 3.5, width = 3, units = 'in')
+```
+
+
+
 
