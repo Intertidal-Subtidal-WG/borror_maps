@@ -119,7 +119,7 @@ ggsave(here('figures', 'exposed-protected.png'), device = png, height = 3.5, wid
 
 
 
-```{r}
+```{r new-england}
 library(ggmap)
 library(usmap)
 
@@ -130,6 +130,20 @@ plot_usmap(include = .new_england, fill = 'grey88') +
 ggsave(here('figures', 'new-england.png'), device = png, height = 3.5, width = 3, units = 'in')
 ```
 
+
+
+plotting transects
+
+```{r}
+library(readr)
+
+transects <- read_csv(here("data","transects","transect_info_decimals.csv"))
+
+
+
+ggplot(appledore) +
+  geom_sf()
+```
 
 
 
