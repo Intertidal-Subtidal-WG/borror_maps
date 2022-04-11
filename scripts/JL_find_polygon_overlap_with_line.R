@@ -1,14 +1,22 @@
 # JL script to ST crop andrea's line
 
-#install.packages("lwgeom")
+
+
+# libraries ---------------------------------------------------------------
 library(lwgeom)
 library(tidyverse)
 library(here)
 library(sf)
 library(ggtext)
 
-# load line at 1.5
-line15 <- read_sf(here("data","shapes_to_plot","appledore_outline_1.5.shp")) %>% janitor::clean_names()
+
+# load data ---------------------------------------------------------------
+
+# load 1.5 depth line
+line15 <- read_sf(here("data","shapes_to_plot","appledore_outline_1.5.shp")) %>% 
+  janitor::clean_names() %>%
+  st_transform(line15, crs=4326) %>%
+  st_union() # use this because this comes as two lines for some reason
 
 # load .rds objects of polygons and appledore map
 load( here("data","shapes_to_plot","spp_shapes_cleaned.rds"))
@@ -17,23 +25,10 @@ load( here("data","shapes_to_plot","appledore.rds"))
 # set crs values 
 shapes_cleaned <- st_as_sf(shapes_cleaned, crs =4326 )
 shapes_cleaned <- shapes_cleaned %>% 
-  mutate(species_general = stringr::str_to_sentence(species_general))
+  mutate(species_general = stringr::str_to_sentence(species_general),
+         geometry = st_make_valid(geometry)) 
+  
 
-line15 <- st_transform(line15, crs=4326)
-
-ggplot()+ 
-  geom_sf(data = appledore)+
-  geom_sf(data = line15 %>% slice(2), color = "red") +
-  geom_sf(data = line15 %>% slice(1), color = "blue")
-# ok looks like our sf line is spit into two for some reason
-
-line15.2 <- st_union(line15)
-ggplot()+ 
-  geom_sf(data = appledore)+
-  geom_sf(data = line15.2, color = "red") 
-
-line15 <- line15.2
-rm(line15.2)
 
 # test to make sure we can find intersections
 test <- st_intersection(line15, shapes_cleaned$geometry[1])
@@ -44,14 +39,13 @@ test2 <- st_intersection(line15, shapes_cleaned$geometry[2])
 theme_set(ggthemes::theme_map())
 ggplot()+ 
   geom_sf(data = appledore)+
-  geom_sf(data = shapes_cleaned, alpha=.5, size=.2,
+  geom_sf(data = shapes_cleaned[c(1,2),], alpha=.5, size=.2,
           aes(geometry = geometry)) +
   geom_sf(data = line15, color ="blue")+
   geom_sf(data = test, color="red")+
   geom_sf(data = test2, color="purple")
 
   
-
 
 # get individual intersections and lengths in for loop --------------------
 
@@ -61,14 +55,9 @@ df <- tibble(species_general=rep(NA,times = nrow(shapes_cleaned)),
              geometry = rep(NA,times = nrow(shapes_cleaned)),
              length = rep(NA,times = nrow(shapes_cleaned)))
 
-
-
-# Jarrett's solution: st_make_valid to fix polygons
-shapes_cleaned <- shapes_cleaned %>% 
-  mutate(geometry = st_make_valid(geometry))
-
 # loop to get geometries
 for (i in 1:nrow(shapes_cleaned)){
+  
   # make species in row i same as species in row i of shapes_clean
   df$species_general[i] = shapes_cleaned$species_general[i]
   
@@ -96,9 +85,14 @@ df <- df %>%
   # drop rows with NA length, meaning that line and polygon don't intersect
   drop_na(length) %>%
   
-  # find overlapping line segments
+  # find overlapping line segments (i.e. polygons that exist for multiple species)
   group_by(year, geometry) %>% add_count() %>%
   arrange(desc(n)) %>%
+  # so there are some polygons shared by up to 4 species. 
+  # for these, we'll divide the length of the line segment by the number of species
+  # to standardize percent calculations.
+  # basically this means if there's a segment that's "urchins and kelp" it will 
+  # count as 50% urchins, 50% kelp
   
   # fix area to divide by overlapping species
   mutate(fixed_length = length/n) %>% 
@@ -106,19 +100,29 @@ df <- df %>%
 
 
 # save out the df as .rds file
-#save(df,
-#     file = here("data","shapes_to_plot","island_perimeter_segments.rds"))
-#
-#load(here("data","shapes_to_plot","island_perimeter_segments.rds"))
+save(df,
+     file = here("data","shapes_to_plot","island_perimeter_segments.rds"))
+rm(list = ls())
+
+load(here("data","shapes_to_plot","island_perimeter_segments.rds"))
+line15 <- read_sf(here("data","shapes_to_plot","appledore_outline_1.5.shp")) %>% 
+  janitor::clean_names() %>%
+  st_transform(line15, crs=4326) %>%
+  st_union() # use this because this comes as two lines for some reason
 
 total_length <- st_length(line15) %>% sum()
-# so total perimeter of island = 5610.871 meters
+# so total perimeter of island = 5566.457 meters
 
 df_percents <- df %>%
   mutate(percent = fixed_length/total_length*100) %>%
   group_by(year, species_general) %>%
   summarize(sum = sum(percent)) %>%
   mutate(sum = as.numeric(sum))
+
+# see full percents sums
+df_percents %>%
+  group_by(year) %>%
+  summarize(sum = sum(sum))
      
 #how much is barren?    
 df_percents %>%
@@ -137,15 +141,6 @@ df_percents %>%
   filter(year<1995, 
          species_general == "Mixed reds") 
 
-df_percents %>%
-  filter(year>1995, 
-         species_general == "Rope kelps") 
-
-
-
-
-
-theme_set(ggthemes::theme_few())
 
 
 
@@ -255,6 +250,8 @@ community_plot <- df_percents3 %>%
 # view plot
 community_plot
 
+
+# check colorblind --------------------------------------------------------
 library(colorblindr)
 cvd_grid(community_plot)
 
@@ -267,22 +264,9 @@ ggsave(community_plot,
        units = "in",
        dpi=300)
 
-df_percents %>% group_by(year) %>%
-  summarize(total = sum(sum))
 
 
-# looks like all years only have ~ 85% cover of the line... why?
-
-ggplot() +
-  geom_sf(data = appledore) +
-  geom_sf(data = line15) + 
-  geom_sf(data = shapes_cleaned %>% filter(year ==1982), size = 0)
-
-
-
-
-
-# now facet by species
+# figure 2 - faceted by species -------------------------------------------
 faceted_perimeter_change <- df %>%
   group_by(year, species_general) %>%
   summarize(length_sum = sum(fixed_length)) %>%
@@ -291,6 +275,8 @@ faceted_perimeter_change <- df %>%
   facet_wrap(~species_general, scales = "free_y", nrow = 2) +
   scale_fill_manual(values = PNWColors::pnw_palette("Bay",8)) +
   labs(x = "Year",y="Total Length (m)") 
+
+
 
 
 ggsave(faceted_perimeter_change,
