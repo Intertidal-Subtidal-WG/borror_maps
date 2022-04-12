@@ -11,6 +11,7 @@ library(broom)
 library(betareg)
 library(readr)
 library(car)
+library(ggplot2)
 
 # data
 dat <- read_csv("data/df_reduced_exposure.csv")
