@@ -1,4 +1,9 @@
-# JL script to ST crop andrea's line
+# JL script to use the line at 1.5m depth perimeter of island to overlap
+# with polygons output from "JL01_clean_polygons". This script will measure
+# the island perimeter accounted for by each species, and quantify percent
+# of perimeter for each species. This script will also create a plot of
+# percent of perimeter in each year, and faceted percent of perimeter of 
+# each species in each year. 
 
 
 
