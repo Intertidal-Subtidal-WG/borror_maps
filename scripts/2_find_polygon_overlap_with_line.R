@@ -1,4 +1,9 @@
-# JL script to ST crop andrea's line
+# JL script to use the line at 1.5m depth perimeter of island to overlap
+# with polygons output from "JL01_clean_polygons". This script will measure
+# the island perimeter accounted for by each species, and quantify percent
+# of perimeter for each species. This script will also create a plot of
+# percent of perimeter in each year, and faceted percent of perimeter of 
+# each species in each year. 
 
 
 
@@ -27,7 +32,7 @@ shapes_cleaned <- st_as_sf(shapes_cleaned, crs =4326 )
 shapes_cleaned <- shapes_cleaned %>% 
   mutate(species_general = stringr::str_to_sentence(species_general),
          geometry = st_make_valid(geometry)) 
-  
+
 
 
 # test to make sure we can find intersections
@@ -45,7 +50,7 @@ ggplot()+
   geom_sf(data = test, color="red")+
   geom_sf(data = test2, color="purple")
 
-  
+
 
 # get individual intersections and lengths in for loop --------------------
 
@@ -123,7 +128,7 @@ df_percents <- df %>%
 df_percents %>%
   group_by(year) %>%
   summarize(sum = sum(sum))
-     
+
 #how much is barren?    
 df_percents %>%
   filter(year<1995, species_general == "Urchin barrens")
@@ -196,7 +201,7 @@ colors <-
     "<br><b>Other</b>",                 "transparent",
     "Urchin barrens",        pal[8],
     
-
+    
   )
 
 # add a column of species groups
@@ -215,8 +220,8 @@ df_percents <- df_percents %>%
 # up in the legend with transparent keys
 df_percents2 <- df_percents %>%
   bind_rows( df_percents %>% distinct(type) %>% mutate(species_general = type,
-                                                    year = 2014,
-                                                    sum = 0))
+                                                       year = 2014,
+                                                       sum = 0))
 
 # change species names to italic
 df_percents3 <- df_percents2 %>%

@@ -30,14 +30,14 @@ appledore <- maine %>%
 rm(maine)
 
 # check that all have same columns
- colnames(m82)
- colnames(m83)
- colnames(m84)
- colnames(m87)
- colnames(m90)
- colnames(m14)
+colnames(m82)
+colnames(m83)
+colnames(m84)
+colnames(m87)
+colnames(m90)
+colnames(m14)
 
- # merge individual maps
+# merge individual maps
 shapes_full <- 
   bind_rows(m82,
             m83,
@@ -65,7 +65,7 @@ shapes_cleaned <- shapes_full %>%
   
   # change all "and"s to commas so mixes are listed in comma-separated form
   mutate_at(.vars = "species", .funs = str_replace, pattern =" and", replacement = ",") %>%
-
+  
   # find max xpecies listed in one polygon
   group_by(year) %>%
   # add arbitrary indexing number
@@ -73,8 +73,8 @@ shapes_cleaned <- shapes_full %>%
   ungroup() %>%
   # count number of species in each polygon
   mutate(n_species =  str_count(species, ',')+1) %>% #arrange(desc(n_species)) # max mix is 4 species
-
-
+  
+  
   # separate shared species by comma
   separate(species, into =c("species1","species2","species3","species4"), sep = ",", fill="right") %>%
   
@@ -124,14 +124,13 @@ target_species <- unique(shapes_cleaned$species_general)[1]
 appledore %>%
   ggplot() +
   geom_sf(alpha=.4, size=.15) +
-    geom_sf(data = shapes_cleaned #%>% filter(species_general %in% target_species)
-            ,
-            aes(alpha=I(percent_cover), geometry = geometry, fill=species_general, color = species_general),
-            size=.05,
-            show.legend = F) +
+  geom_sf(data = shapes_cleaned #%>% filter(species_general %in% target_species)
+          ,
+          aes(alpha=I(percent_cover), geometry = geometry, fill=species_general, color = species_general),
+          size=.05,
+          show.legend = F) +
   ggthemes::theme_map() +
   facet_grid(species_general~year) +
   theme(strip.text = element_text(size=13),
         strip.text.y = element_text(size=11),
         panel.border = element_rect(size=.2, fill="transparent"))
-
