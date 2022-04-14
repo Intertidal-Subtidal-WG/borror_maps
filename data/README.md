@@ -1,6 +1,6 @@
 ### Original and derived data  for "Notes from the Past Show How Local Variability can Stymie Urchins and the Rise of the Reds in the Gulf of Maine"
 
-**Directories**
+**Directories and Files**
 
 - Appledore Polygons - polygons dividing the island into quarters for exposure analysis
 
