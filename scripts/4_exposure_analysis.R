@@ -1,7 +1,5 @@
 #' ------------------------------
 #' Models to look at if exposure modified global change
-#' Notes to self - show var in temp in the NW
-#' Compare to SW and NE
 #' ------------------------------
 
 # libraries
@@ -108,6 +106,3 @@ contrast(kelp_em, "pairwise", method = "fdr") %>%
   labs(y = "", title = "Posthoc with fdr for Kelp")
 ggsave("figures/kelp_posthoc.jpg", dpi = 600)
 
-
-# 2014?
-  
