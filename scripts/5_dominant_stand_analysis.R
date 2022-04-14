@@ -1,3 +1,8 @@
+#' --------------------------------------------------
+#' Analysis of change in the dominant habitat types
+#' over time aggregated as reds, urchins, kelps
+#' --------------------------------------------------
+
 #libraries
 library(tidyverse)
 library(here)
