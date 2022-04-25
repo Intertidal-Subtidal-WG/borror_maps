@@ -134,3 +134,13 @@ appledore %>%
   theme(strip.text = element_text(size=13),
         strip.text.y = element_text(size=11),
         panel.border = element_rect(size=.2, fill="transparent"))
+
+
+# export plot
+ggsave(file = here("figures","all_sp_all_years_polygons_faceted.png"),
+       width = 6,
+       height = 4,
+       units = "in",
+       dpi=300)
+
+
