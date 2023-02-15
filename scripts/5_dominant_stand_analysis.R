@@ -7,6 +7,7 @@
 library(tidyverse)
 library(here)
 library(sf)
+library(patchwork)
 
 #some themes
 theme_set(ggthemes::theme_few())
@@ -79,7 +80,7 @@ df_reduced <- bind_rows(barrens, kelps_and_reds) %>%
   mutate(length = st_length(geometry))
 
 red_barren_kelp <- ggplot(df_reduced, aes(color = dominant_cover)) +
-  geom_sf(size = 2) +
+  geom_sf(linewidth = 2) +
   facet_wrap(.~year) +
   theme_void(base_size = 16) +
   scale_color_manual(values = c("darkgreen", "darkmagenta", "red", "grey")) +
@@ -94,6 +95,35 @@ ggsave(red_barren_kelp,
 
 save(df_reduced,
      file = here("data","shapes_to_plot","island_perimeter_red_barren_kelp.rds"))
+
+
+# show with a map of islands to understand conditions
+appledore_split <- readRDS("data/shapes_to_plot/appledore_split.rds")
+
+appledore_split_plot <- ggplot() +
+  geom_sf(data = appledore_split,
+          mapping = aes(color = quadrant), 
+          fill = NA, 
+          lwd = 4) +
+  geom_sf(data = appledore, fill = "white", color = "white") +
+  ggrepel::geom_label_repel(data = appledore_split,
+                            mapping = aes(color = quadrant, 
+                                          geometry = geometry,
+                                          label = condition),
+                            stat = "sf_coordinates",
+                            color = "black",
+                            force = 2) +
+  scale_colour_grey(guide = "none") +
+  theme_void()
+
+red_barren_kelp_island <- appledore_split_plot + red_barren_kelp +
+  plot_layout(width = c(5,10))
+
+ggsave(red_barren_kelp_island,
+       file = here("figures","red_barren_kelp_map_with_island.png"),
+       width = 8,
+       dpi=300)
+
 
 # check for colorblindness
 # clauswilke/colorblindr from github
