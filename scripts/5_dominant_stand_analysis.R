@@ -121,7 +121,8 @@ red_barren_kelp_island <- appledore_split_plot + red_barren_kelp +
 
 ggsave(red_barren_kelp_island,
        file = here("figures","red_barren_kelp_map_with_island.png"),
-       width = 8,
+       width = 10,
+       height = 8,
        dpi=300)
 
 
