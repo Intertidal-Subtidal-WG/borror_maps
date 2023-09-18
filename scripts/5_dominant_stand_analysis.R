@@ -112,13 +112,18 @@ appledore_split_plot <- ggplot() +
                                           label = condition),
                             stat = "sf_coordinates",
                             color = "black",
-                            force = 2) +
+                            force = 1, 
+                            seed = 8675309,
+                            nudge_x = c(0,0,0.001,-0.0029),
+                            segment.size = 0) +
   scale_colour_grey(guide = "none") +
   theme_void()
 
 red_barren_kelp_island <- appledore_split_plot + red_barren_kelp +
   plot_layout(width = c(5,10))
 
+
+## Write out figure 4
 ggsave(red_barren_kelp_island,
        file = here("figures","red_barren_kelp_map_with_island.png"),
        width = 10,
